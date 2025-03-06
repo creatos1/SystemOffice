@@ -1,4 +1,3 @@
-
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
@@ -31,7 +30,7 @@ import { RouterLink } from '@angular/router';
                 <option value="tintas">Tintas y Toners</option>
               </select>
             </div>
-            
+
             <div class="filter-group">
               <label>Marca:</label>
               <select (change)="filterProducts('brand', $event)">
@@ -44,7 +43,7 @@ import { RouterLink } from '@angular/router';
                 <option value="samsung">Samsung</option>
               </select>
             </div>
-            
+
             <div class="filter-group">
               <label>Precio:</label>
               <select (change)="filterProducts('price', $event)">
@@ -56,7 +55,7 @@ import { RouterLink } from '@angular/router';
               </select>
             </div>
           </div>
-          
+
           <div class="filter-search">
             <input type="text" placeholder="Buscar productos..." (input)="search($event)">
             <button class="search-btn"><i class="fas fa-search"></i></button>
@@ -79,10 +78,10 @@ import { RouterLink } from '@angular/router';
             </a>
           </div>
         </div>
-        
+
         <div class="products-list">
           <h2>Productos Destacados</h2>
-          
+
           <div class="products-wrapper">
             <div class="product-card" *ngFor="let product of filteredProducts">
               <div class="product-image">
@@ -116,7 +115,7 @@ import { RouterLink } from '@angular/router';
               </div>
             </div>
           </div>
-          
+
           <div class="pagination">
             <button class="pagination-btn prev" [disabled]="currentPage === 1" (click)="changePage(currentPage - 1)">
               <i class="fas fa-chevron-left"></i> Anterior
@@ -154,20 +153,20 @@ import { RouterLink } from '@angular/router';
       color: white;
       text-align: center;
     }
-    
+
     .page-header h1 {
       font-size: 3rem;
       margin-bottom: 1rem;
       color: white;
     }
-    
+
     .page-header p {
       font-size: 1.25rem;
       max-width: 800px;
       margin: 0 auto;
       opacity: 0.9;
     }
-    
+
     .products-filter {
       padding: 2rem 0;
       background: white;
@@ -175,7 +174,7 @@ import { RouterLink } from '@angular/router';
       position: relative;
       z-index: 10;
     }
-    
+
     .filter-wrapper {
       display: flex;
       justify-content: space-between;
@@ -183,24 +182,24 @@ import { RouterLink } from '@angular/router';
       flex-wrap: wrap;
       gap: 1.5rem;
     }
-    
+
     .filter-options {
       display: flex;
       align-items: center;
       gap: 1rem;
       flex-wrap: wrap;
     }
-    
+
     .filter-group {
       display: flex;
       align-items: center;
       gap: 0.5rem;
     }
-    
+
     .filter-group label {
       font-weight: 500;
     }
-    
+
     .filter-group select {
       padding: 0.5rem 2rem 0.5rem 1rem;
       border: 1px solid var(--border-color);
@@ -213,12 +212,12 @@ import { RouterLink } from '@angular/router';
       background-repeat: no-repeat;
       background-size: 1.5em 1.5em;
     }
-    
+
     .filter-search {
       position: relative;
       width: 300px;
     }
-    
+
     .filter-search input {
       width: 100%;
       padding: 0.75rem 3rem 0.75rem 1rem;
@@ -226,7 +225,7 @@ import { RouterLink } from '@angular/router';
       border-radius: 0.375rem;
       font-size: 0.875rem;
     }
-    
+
     .filter-search .search-btn {
       position: absolute;
       right: 0;
@@ -241,15 +240,15 @@ import { RouterLink } from '@angular/router';
       color: var(--light-text);
       cursor: pointer;
     }
-    
+
     .products-grid {
       padding: 4rem 0;
     }
-    
+
     .product-categories {
       margin-bottom: 4rem;
     }
-    
+
     .product-categories h2,
     .products-list h2,
     .product-brands h2 {
@@ -258,7 +257,7 @@ import { RouterLink } from '@angular/router';
       position: relative;
       display: inline-block;
     }
-    
+
     .product-categories h2:after,
     .products-list h2:after,
     .product-brands h2:after {
@@ -270,13 +269,13 @@ import { RouterLink } from '@angular/router';
       height: 3px;
       background: var(--primary-color);
     }
-    
+
     .categories-grid {
       display: grid;
       grid-template-columns: repeat(6, 1fr);
       gap: 1.5rem;
     }
-    
+
     .category-card {
       background: white;
       border: 1px solid var(--border-color);
@@ -287,13 +286,13 @@ import { RouterLink } from '@angular/router';
       text-decoration: none;
       color: var(--text-color);
     }
-    
+
     .category-card:hover {
       transform: translateY(-5px);
       box-shadow: var(--shadow);
       border-color: transparent;
     }
-    
+
     .category-icon {
       width: 60px;
       height: 60px;
@@ -306,24 +305,24 @@ import { RouterLink } from '@angular/router';
       color: var(--primary-color);
       font-size: 1.5rem;
     }
-    
+
     .category-card h3 {
       font-size: 1rem;
       margin-bottom: 0.5rem;
     }
-    
+
     .category-card p {
       font-size: 0.875rem;
       color: var(--light-text);
     }
-    
+
     .products-wrapper {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 2rem;
       margin-bottom: 3rem;
     }
-    
+
     .product-card {
       background: white;
       border-radius: 0.5rem;
@@ -331,11 +330,11 @@ import { RouterLink } from '@angular/router';
       box-shadow: var(--shadow);
       transition: transform 0.3s;
     }
-    
+
     .product-card:hover {
       transform: translateY(-10px);
     }
-    
+
     .product-image {
       position: relative;
       overflow: hidden;
@@ -345,16 +344,16 @@ import { RouterLink } from '@angular/router';
       justify-content: center;
       background: #f8fafc;
     }
-    
+
     .product-image img {
       max-height: 80%;
       transition: transform 0.5s;
     }
-    
+
     .product-card:hover .product-image img {
       transform: scale(1.1);
     }
-    
+
     .product-badges {
       position: absolute;
       top: 1rem;
@@ -362,24 +361,24 @@ import { RouterLink } from '@angular/router';
       display: flex;
       gap: 0.5rem;
     }
-    
+
     .badge {
       padding: 0.25rem 0.75rem;
       border-radius: 1rem;
       font-size: 0.75rem;
       font-weight: 600;
     }
-    
+
     .badge.new {
       background: var(--primary-color);
       color: white;
     }
-    
+
     .badge.discount {
       background: var(--danger-color);
       color: white;
     }
-    
+
     .product-actions {
       position: absolute;
       top: 1rem;
@@ -390,11 +389,11 @@ import { RouterLink } from '@angular/router';
       transform: translateX(60px);
       transition: transform 0.3s;
     }
-    
+
     .product-card:hover .product-actions {
       transform: translateX(0);
     }
-    
+
     .action-btn {
       width: 40px;
       height: 40px;
@@ -409,30 +408,30 @@ import { RouterLink } from '@angular/router';
       cursor: pointer;
       transition: background 0.3s, color 0.3s;
     }
-    
+
     .action-btn:hover {
       background: var(--primary-color);
       color: white;
     }
-    
+
     .product-info {
       padding: 1.5rem;
     }
-    
+
     .product-category {
       display: block;
       font-size: 0.875rem;
       color: var(--light-text);
       margin-bottom: 0.5rem;
     }
-    
+
     .product-info h3 {
       font-size: 1.1rem;
       margin-bottom: 0.75rem;
       line-height: 1.4;
       min-height: 3rem;
     }
-    
+
     .product-rating {
       display: flex;
       align-items: center;
@@ -440,49 +439,49 @@ import { RouterLink } from '@angular/router';
       font-size: 0.875rem;
       color: #f59e0b;
     }
-    
+
     .rating-count {
       margin-left: 0.5rem;
       color: var(--light-text);
     }
-    
+
     .product-price {
       display: flex;
       align-items: center;
       gap: 0.75rem;
       margin-bottom: 1rem;
     }
-    
+
     .current-price {
       font-size: 1.25rem;
       font-weight: 600;
       color: var(--primary-color);
     }
-    
+
     .old-price {
       font-size: 0.875rem;
       color: var(--light-text);
       text-decoration: line-through;
     }
-    
+
     .product-buttons {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 0.75rem;
     }
-    
+
     .product-btn {
       font-size: 0.875rem;
       padding: 0.5rem 0;
     }
-    
+
     .pagination {
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 1rem;
     }
-    
+
     .pagination-btn {
       display: flex;
       align-items: center;
@@ -495,23 +494,23 @@ import { RouterLink } from '@angular/router';
       cursor: pointer;
       transition: background-color 0.3s, color 0.3s;
     }
-    
+
     .pagination-btn:not(:disabled):hover {
       background-color: var(--primary-color);
       color: white;
       border-color: var(--primary-color);
     }
-    
+
     .pagination-btn:disabled {
       opacity: 0.5;
       cursor: not-allowed;
     }
-    
+
     .pagination-numbers {
       display: flex;
       gap: 0.5rem;
     }
-    
+
     .pagination-num {
       width: 40px;
       height: 40px;
@@ -524,18 +523,18 @@ import { RouterLink } from '@angular/router';
       cursor: pointer;
       transition: background-color 0.3s, color 0.3s;
     }
-    
+
     .pagination-num:hover, .pagination-num.active {
       background-color: var(--primary-color);
       color: white;
       border-color: var(--primary-color);
     }
-    
+
     .product-brands {
       padding: 4rem 0;
       background-color: var(--light-bg);
     }
-    
+
     .brands-grid {
       display: flex;
       justify-content: space-between;
@@ -543,59 +542,59 @@ import { RouterLink } from '@angular/router';
       flex-wrap: wrap;
       gap: 2rem;
     }
-    
+
     .brand-logo {
       max-width: 150px;
       opacity: 0.7;
       transition: opacity 0.3s;
       filter: grayscale(100%);
     }
-    
+
     .brand-logo:hover {
       opacity: 1;
       filter: grayscale(0);
     }
-    
+
     @media (max-width: 1200px) {
       .categories-grid {
         grid-template-columns: repeat(4, 1fr);
       }
-      
+
       .products-wrapper {
         grid-template-columns: repeat(3, 1fr);
       }
     }
-    
+
     @media (max-width: 992px) {
       .categories-grid {
         grid-template-columns: repeat(3, 1fr);
       }
-      
+
       .products-wrapper {
         grid-template-columns: repeat(2, 1fr);
       }
     }
-    
+
     @media (max-width: 768px) {
       .filter-wrapper {
         flex-direction: column;
         align-items: stretch;
       }
-      
+
       .filter-search {
         width: 100%;
       }
-      
+
       .categories-grid {
         grid-template-columns: repeat(2, 1fr);
       }
     }
-    
+
     @media (max-width: 576px) {
       .products-wrapper {
         grid-template-columns: 1fr;
       }
-      
+
       .categories-grid {
         grid-template-columns: 1fr;
       }
@@ -620,7 +619,7 @@ export class ProductsComponent {
       brand: 'hp',
       price: 7999,
       oldPrice: 8999,
-      image: 'assets/images/product-1.png',
+      image: 'https://via.placeholder.com/150',
       isNew: true,
       discount: 11,
       rating: 4.8,
@@ -633,7 +632,7 @@ export class ProductsComponent {
       brand: 'epson',
       price: 4599,
       oldPrice: null,
-      image: 'assets/images/product-2.png',
+      image: 'https://via.placeholder.com/150',
       isNew: false,
       discount: null,
       rating: 4.6,
@@ -646,7 +645,7 @@ export class ProductsComponent {
       brand: 'brother',
       price: 9899,
       oldPrice: 10999,
-      image: 'assets/images/product-3.png',
+      image: 'https://via.placeholder.com/150',
       isNew: false,
       discount: 10,
       rating: 4.7,
@@ -659,7 +658,7 @@ export class ProductsComponent {
       brand: 'canon',
       price: 5299,
       oldPrice: null,
-      image: 'assets/images/product-4.png',
+      image: 'https://via.placeholder.com/150',
       isNew: true,
       discount: null,
       rating: 4.5,
@@ -672,7 +671,7 @@ export class ProductsComponent {
       brand: 'xerox',
       price: 14999,
       oldPrice: 16999,
-      image: 'assets/images/product-5.png',
+      image: 'https://via.placeholder.com/150',
       isNew: false,
       discount: 12,
       rating: 4.9,
@@ -685,7 +684,7 @@ export class ProductsComponent {
       brand: 'samsung',
       price: 2599,
       oldPrice: 2999,
-      image: 'assets/images/product-6.png',
+      image: 'https://via.placeholder.com/150',
       isNew: false,
       discount: 13,
       rating: 4.3,
@@ -698,7 +697,7 @@ export class ProductsComponent {
       brand: 'hp',
       price: 24999,
       oldPrice: null,
-      image: 'assets/images/product-7.png',
+      image: 'https://via.placeholder.com/150',
       isNew: true,
       discount: null,
       rating: 4.7,
@@ -711,7 +710,7 @@ export class ProductsComponent {
       brand: 'epson',
       price: 19999,
       oldPrice: 21999,
-      image: 'assets/images/product-8.png',
+      image: 'https://via.placeholder.com/150',
       isNew: false,
       discount: 9,
       rating: 4.6,
@@ -720,12 +719,12 @@ export class ProductsComponent {
   ];
 
   brands = [
-    { name: 'HP', logo: 'assets/images/brand-hp.png' },
-    { name: 'Canon', logo: 'assets/images/brand-canon.png' },
-    { name: 'Epson', logo: 'assets/images/brand-epson.png' },
-    { name: 'Brother', logo: 'assets/images/brand-brother.png' },
-    { name: 'Xerox', logo: 'assets/images/brand-xerox.png' },
-    { name: 'Samsung', logo: 'assets/images/brand-samsung.png' }
+    { name: 'HP', logo: 'https://via.placeholder.com/150' },
+    { name: 'Canon', logo: 'https://via.placeholder.com/150' },
+    { name: 'Epson', logo: 'https://via.placeholder.com/150' },
+    { name: 'Brother', logo: 'https://via.placeholder.com/150' },
+    { name: 'Xerox', logo: 'https://via.placeholder.com/150' },
+    { name: 'Samsung', logo: 'https://via.placeholder.com/150' }
   ];
 
   filteredProducts = [...this.products];
@@ -735,7 +734,7 @@ export class ProductsComponent {
 
   filterProducts(type: string, event: Event) {
     const value = (event.target as HTMLSelectElement).value;
-    
+
     if (value === 'all') {
       this.filteredProducts = [...this.products];
     } else {
@@ -759,14 +758,14 @@ export class ProductsComponent {
         }
       }
     }
-    
+
     this.totalPages = Math.ceil(this.filteredProducts.length / this.itemsPerPage);
     this.currentPage = 1;
   }
 
   search(event: Event) {
     const value = (event.target as HTMLInputElement).value.toLowerCase();
-    
+
     if (value.trim() === '') {
       this.filteredProducts = [...this.products];
     } else {
@@ -774,7 +773,7 @@ export class ProductsComponent {
         product.name.toLowerCase().includes(value) || 
         product.category.toLowerCase().includes(value));
     }
-    
+
     this.totalPages = Math.ceil(this.filteredProducts.length / this.itemsPerPage);
     this.currentPage = 1;
   }

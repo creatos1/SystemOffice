@@ -1,4 +1,3 @@
-
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
@@ -19,7 +18,7 @@ import { RouterLink } from '@angular/router';
           </div>
         </div>
         <div class="hero-image animate-fade-in">
-          <img src="assets/images/hero-printer.png" alt="Impresora moderna" />
+          <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Impresora moderna" />
         </div>
       </div>
     </section>
@@ -30,7 +29,7 @@ import { RouterLink } from '@angular/router';
           <h2>¿Por qué elegirnos?</h2>
           <p>Expertos en soluciones de impresión con más de 15 años de experiencia</p>
         </div>
-        
+
         <div class="features-grid">
           <div class="feature-card">
             <div class="feature-icon">
@@ -39,7 +38,7 @@ import { RouterLink } from '@angular/router';
             <h3>Calidad Garantizada</h3>
             <p>Productos originales y certificados con garantía extendida</p>
           </div>
-          
+
           <div class="feature-card">
             <div class="feature-icon">
               <i class="fas fa-truck"></i>
@@ -47,7 +46,7 @@ import { RouterLink } from '@angular/router';
             <h3>Entrega Rápida</h3>
             <p>Envíos en 24-48 horas a cualquier parte del país</p>
           </div>
-          
+
           <div class="feature-card">
             <div class="feature-icon">
               <i class="fas fa-tools"></i>
@@ -55,7 +54,7 @@ import { RouterLink } from '@angular/router';
             <h3>Soporte Técnico</h3>
             <p>Equipo de técnicos certificados para resolver cualquier problema</p>
           </div>
-          
+
           <div class="feature-card">
             <div class="feature-icon">
               <i class="fas fa-headset"></i>
@@ -73,7 +72,7 @@ import { RouterLink } from '@angular/router';
           <h2>Nuestros Productos Destacados</h2>
           <p>Equipos de impresión de última generación para todas tus necesidades</p>
         </div>
-        
+
         <div class="products-slider">
           <div class="product-card" *ngFor="let product of featuredProducts">
             <div class="product-image">
@@ -94,7 +93,7 @@ import { RouterLink } from '@angular/router';
             </div>
           </div>
         </div>
-        
+
         <div class="text-center mt-4">
           <a routerLink="/productos" class="btn btn-primary">Ver Todos los Productos</a>
         </div>
@@ -107,7 +106,7 @@ import { RouterLink } from '@angular/router';
           <h2>Servicios Profesionales</h2>
           <p>Soluciones completas para mantener tus equipos funcionando perfectamente</p>
         </div>
-        
+
         <div class="services-grid">
           <div class="service-card" *ngFor="let service of services">
             <div class="service-icon">
@@ -127,7 +126,7 @@ import { RouterLink } from '@angular/router';
           <h2>Lo que dicen nuestros clientes</h2>
           <p>Más de 500 empresas confían en nosotros para sus necesidades de impresión</p>
         </div>
-        
+
         <div class="testimonials-slider">
           <div class="testimonial-card" *ngFor="let testimonial of testimonials">
             <div class="testimonial-rating">
@@ -161,7 +160,7 @@ import { RouterLink } from '@angular/router';
         <div class="section-header">
           <h2>Marcas que distribuimos</h2>
         </div>
-        
+
         <div class="brands-slider">
           <div class="brand-logo" *ngFor="let brand of brands">
             <img [src]="brand.logo" [alt]="brand.name" />
@@ -180,18 +179,18 @@ import { RouterLink } from '@angular/router';
       overflow: hidden;
       background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
     }
-    
+
     .hero .container {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 2rem;
     }
-    
+
     .hero-content {
       flex: 1;
     }
-    
+
     .hero h1 {
       font-size: 3.5rem;
       font-weight: 700;
@@ -199,30 +198,30 @@ import { RouterLink } from '@angular/router';
       margin-bottom: 1.5rem;
       color: var(--text-color);
     }
-    
+
     .hero-subtitle {
       font-size: 1.25rem;
       color: var(--light-text);
       margin-bottom: 2.5rem;
     }
-    
+
     .hero-buttons {
       display: flex;
       gap: 1rem;
     }
-    
+
     .hero-image {
       flex: 1;
       display: flex;
       justify-content: flex-end;
       position: relative;
     }
-    
+
     .hero-image img {
       max-width: 100%;
       animation: float 6s ease-in-out infinite;
     }
-    
+
     @keyframes float {
       0%, 100% {
         transform: translateY(0);
@@ -231,20 +230,20 @@ import { RouterLink } from '@angular/router';
         transform: translateY(-20px);
       }
     }
-    
+
     .section-header {
       text-align: center;
       max-width: 800px;
       margin: 0 auto 4rem;
     }
-    
+
     .section-header h2 {
       font-size: 2.5rem;
       margin-bottom: 1rem;
       position: relative;
       display: inline-block;
     }
-    
+
     .section-header h2:after {
       content: '';
       position: absolute;
@@ -255,23 +254,23 @@ import { RouterLink } from '@angular/router';
       height: 3px;
       background: var(--primary-color);
     }
-    
+
     .section-header p {
       font-size: 1.25rem;
       color: var(--light-text);
     }
-    
+
     .features {
       padding: 6rem 0;
       background-color: var(--light-bg);
     }
-    
+
     .features-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 2rem;
     }
-    
+
     .feature-card {
       background: white;
       padding: 2rem;
@@ -280,12 +279,12 @@ import { RouterLink } from '@angular/router';
       text-align: center;
       transition: transform 0.3s, box-shadow 0.3s;
     }
-    
+
     .feature-card:hover {
       transform: translateY(-10px);
       box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
     }
-    
+
     .feature-icon {
       width: 70px;
       height: 70px;
@@ -298,22 +297,22 @@ import { RouterLink } from '@angular/router';
       color: var(--primary-color);
       font-size: 1.75rem;
     }
-    
+
     .feature-card h3 {
       font-size: 1.25rem;
       margin-bottom: 1rem;
     }
-    
+
     .products-preview {
       padding: 6rem 0;
     }
-    
+
     .products-slider {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 2rem;
     }
-    
+
     .product-card {
       background: white;
       border-radius: 1rem;
@@ -321,11 +320,11 @@ import { RouterLink } from '@angular/router';
       box-shadow: var(--shadow);
       transition: transform 0.3s;
     }
-    
+
     .product-card:hover {
       transform: translateY(-10px);
     }
-    
+
     .product-image {
       position: relative;
       overflow: hidden;
@@ -335,16 +334,16 @@ import { RouterLink } from '@angular/router';
       justify-content: center;
       background: #f8fafc;
     }
-    
+
     .product-image img {
       max-height: 100%;
       transition: transform 0.5s;
     }
-    
+
     .product-card:hover .product-image img {
       transform: scale(1.1);
     }
-    
+
     .product-badges {
       position: absolute;
       top: 1rem;
@@ -352,73 +351,73 @@ import { RouterLink } from '@angular/router';
       display: flex;
       gap: 0.5rem;
     }
-    
+
     .badge {
       padding: 0.25rem 0.75rem;
       border-radius: 1rem;
       font-size: 0.75rem;
       font-weight: 600;
     }
-    
+
     .badge.new {
       background: var(--primary-color);
       color: white;
     }
-    
+
     .badge.discount {
       background: var(--danger-color);
       color: white;
     }
-    
+
     .product-info {
       padding: 1.5rem;
     }
-    
+
     .product-info h3 {
       font-size: 1.25rem;
       margin-bottom: 0.5rem;
     }
-    
+
     .product-category {
       color: var(--light-text);
       font-size: 0.875rem;
       margin-bottom: 1rem;
     }
-    
+
     .product-price {
       display: flex;
       align-items: center;
       gap: 0.75rem;
       margin-bottom: 1rem;
     }
-    
+
     .current-price {
       font-size: 1.25rem;
       font-weight: 600;
       color: var(--primary-color);
     }
-    
+
     .old-price {
       font-size: 1rem;
       color: var(--light-text);
       text-decoration: line-through;
     }
-    
+
     .product-btn {
       width: 100%;
     }
-    
+
     .services-preview {
       padding: 6rem 0;
       background: var(--light-bg);
     }
-    
+
     .services-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 2rem;
     }
-    
+
     .service-card {
       background: white;
       padding: 2.5rem;
@@ -426,11 +425,11 @@ import { RouterLink } from '@angular/router';
       box-shadow: var(--shadow);
       transition: transform 0.3s;
     }
-    
+
     .service-card:hover {
       transform: translateY(-10px);
     }
-    
+
     .service-icon {
       width: 80px;
       height: 80px;
@@ -443,122 +442,122 @@ import { RouterLink } from '@angular/router';
       color: var(--primary-color);
       font-size: 2rem;
     }
-    
+
     .service-card h3 {
       font-size: 1.5rem;
       margin-bottom: 1rem;
     }
-    
+
     .service-card p {
       margin-bottom: 1.5rem;
       color: var(--light-text);
     }
-    
+
     .service-link {
       font-weight: 500;
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
     }
-    
+
     .service-link i {
       transition: transform 0.3s;
     }
-    
+
     .service-link:hover i {
       transform: translateX(5px);
     }
-    
+
     .testimonials {
       padding: 6rem 0;
     }
-    
+
     .testimonials-slider {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 2rem;
     }
-    
+
     .testimonial-card {
       background: white;
       padding: 2rem;
       border-radius: 1rem;
       box-shadow: var(--shadow);
     }
-    
+
     .testimonial-rating {
       color: #f59e0b;
       margin-bottom: 1rem;
     }
-    
+
     .testimonial-text {
       font-style: italic;
       margin-bottom: 1.5rem;
     }
-    
+
     .testimonial-author {
       display: flex;
       align-items: center;
       gap: 1rem;
     }
-    
+
     .testimonial-avatar {
       width: 60px;
       height: 60px;
       border-radius: 50%;
       object-fit: cover;
     }
-    
+
     .testimonial-info h4 {
       font-size: 1.1rem;
       margin-bottom: 0.25rem;
     }
-    
+
     .testimonial-info p {
       font-size: 0.875rem;
       color: var(--light-text);
     }
-    
+
     .cta {
       padding: 5rem 0;
       background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
       color: white;
       text-align: center;
     }
-    
+
     .cta-content {
       max-width: 800px;
       margin: 0 auto;
     }
-    
+
     .cta h2 {
       font-size: 2.5rem;
       margin-bottom: 1rem;
       color: white;
     }
-    
+
     .cta p {
       font-size: 1.25rem;
       margin-bottom: 2rem;
       opacity: 0.9;
     }
-    
+
     .btn-cta {
       background: white;
       color: var(--primary-color);
       font-size: 1.1rem;
       padding: 1rem 2.5rem;
     }
-    
+
     .btn-cta:hover {
       background: rgba(255, 255, 255, 0.9);
       color: var(--primary-color);
     }
-    
+
     .brands {
       padding: 4rem 0;
     }
-    
+
     .brands-slider {
       display: flex;
       justify-content: space-between;
@@ -566,54 +565,54 @@ import { RouterLink } from '@angular/router';
       flex-wrap: wrap;
       gap: 2rem;
     }
-    
+
     .brand-logo {
       max-width: 150px;
       opacity: 0.7;
       transition: opacity 0.3s;
     }
-    
+
     .brand-logo:hover {
       opacity: 1;
     }
-    
+
     @media (max-width: 1200px) {
       .hero h1 {
         font-size: 3rem;
       }
-      
+
       .products-slider,
       .features-grid {
         grid-template-columns: repeat(3, 1fr);
       }
     }
-    
+
     @media (max-width: 992px) {
       .hero .container {
         flex-direction: column;
         text-align: center;
       }
-      
+
       .hero-buttons {
         justify-content: center;
       }
-      
+
       .features-grid,
       .products-slider {
         grid-template-columns: repeat(2, 1fr);
       }
-      
+
       .services-grid,
       .testimonials-slider {
         grid-template-columns: 1fr;
       }
     }
-    
+
     @media (max-width: 768px) {
       .hero h1 {
         font-size: 2.5rem;
       }
-      
+
       .features-grid,
       .products-slider {
         grid-template-columns: 1fr;

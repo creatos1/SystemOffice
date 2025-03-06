@@ -1,4 +1,3 @@
-
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
@@ -54,11 +53,14 @@ import { RouterLink } from '@angular/router';
           <h2>Servicios que ofrecemos</h2>
           <p>Nuestros servicios están diseñados para cubrir todas tus necesidades de impresión</p>
         </div>
-        
+
         <div class="services-list">
           <div class="service-card" *ngFor="let service of services">
             <div class="service-icon">
               <i [class]="service.icon"></i>
+            </div>
+            <div class="service-image">
+              <img [src]="service.image" [alt]="service.title">
             </div>
             <h3>{{service.title}}</h3>
             <p>{{service.description}}</p>
@@ -83,7 +85,7 @@ import { RouterLink } from '@angular/router';
           <h2>Nuestro Proceso</h2>
           <p>Cómo trabajamos para garantizar un servicio de calidad</p>
         </div>
-        
+
         <div class="process-steps">
           <div class="step" *ngFor="let step of processSteps; let i = index">
             <div class="step-number">{{i + 1}}</div>
@@ -102,7 +104,7 @@ import { RouterLink } from '@angular/router';
           <h2>Preguntas Frecuentes</h2>
           <p>Respuestas a las dudas más comunes sobre nuestros servicios</p>
         </div>
-        
+
         <div class="faq-list">
           <div class="faq-item" *ngFor="let faq of faqs; let i = index">
             <div class="faq-question" (click)="toggleFaq(i)">
@@ -123,7 +125,7 @@ import { RouterLink } from '@angular/router';
           <h2>Clientes Satisfechos</h2>
           <p>Lo que dicen nuestros clientes sobre nuestros servicios</p>
         </div>
-        
+
         <div class="testimonials-grid">
           <div class="testimonial-card" *ngFor="let testimonial of testimonials">
             <div class="testimonial-rating">
@@ -162,40 +164,40 @@ import { RouterLink } from '@angular/router';
       color: white;
       text-align: center;
     }
-    
+
     .page-header h1 {
       font-size: 3rem;
       margin-bottom: 1rem;
       color: white;
     }
-    
+
     .page-header p {
       font-size: 1.25rem;
       max-width: 800px;
       margin: 0 auto;
       opacity: 0.9;
     }
-    
+
     .services-overview {
       padding: 6rem 0;
     }
-    
+
     .overview-content {
       display: flex;
       align-items: center;
       gap: 4rem;
     }
-    
+
     .overview-text {
       flex: 1;
     }
-    
+
     .overview-text h2 {
       font-size: 2.5rem;
       margin-bottom: 1.5rem;
       position: relative;
     }
-    
+
     .overview-text h2:after {
       content: '';
       position: absolute;
@@ -205,65 +207,65 @@ import { RouterLink } from '@angular/router';
       height: 3px;
       background: var(--primary-color);
     }
-    
+
     .lead {
       font-size: 1.25rem;
       color: var(--text-color);
       margin-bottom: 1.5rem;
       line-height: 1.5;
     }
-    
+
     .stats-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 1.5rem;
       margin-top: 3rem;
     }
-    
+
     .stat-item {
       text-align: center;
     }
-    
+
     .stat-number {
       font-size: 2.5rem;
       font-weight: 700;
       color: var(--primary-color);
       margin-bottom: 0.5rem;
     }
-    
+
     .stat-text {
       font-size: 0.875rem;
       color: var(--light-text);
     }
-    
+
     .overview-image {
       flex: 1;
     }
-    
+
     .overview-image img {
       width: 100%;
       border-radius: 1rem;
       box-shadow: var(--shadow);
     }
-    
+
     .services-grid {
       padding: 6rem 0;
       background-color: var(--light-bg);
     }
-    
+
     .section-header {
       text-align: center;
       max-width: 800px;
       margin: 0 auto 4rem;
     }
-    
+
     .section-header h2 {
       font-size: 2.5rem;
       margin-bottom: 1rem;
       position: relative;
       display: inline-block;
     }
-    
+
     .section-header h2:after {
       content: '';
       position: absolute;
@@ -274,18 +276,18 @@ import { RouterLink } from '@angular/router';
       height: 3px;
       background: var(--primary-color);
     }
-    
+
     .section-header p {
       font-size: 1.25rem;
       color: var(--light-text);
     }
-    
+
     .services-list {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 2rem;
     }
-    
+
     .service-card {
       background: white;
       padding: 2.5rem;
@@ -293,11 +295,11 @@ import { RouterLink } from '@angular/router';
       box-shadow: var(--shadow);
       transition: transform 0.3s;
     }
-    
+
     .service-card:hover {
       transform: translateY(-10px);
     }
-    
+
     .service-icon {
       width: 80px;
       height: 80px;
@@ -310,62 +312,69 @@ import { RouterLink } from '@angular/router';
       color: var(--primary-color);
       font-size: 2rem;
     }
-    
+    .service-image {
+      margin-bottom: 1.5rem;
+    }
+    .service-image img {
+      width: 100%;
+      height: auto;
+    }
+
     .service-card h3 {
       font-size: 1.5rem;
       margin-bottom: 1rem;
     }
-    
+
     .service-card p {
       margin-bottom: 1.5rem;
       color: var(--light-text);
     }
-    
+
     .service-features {
       list-style: none;
       padding: 0;
       margin-bottom: 1.5rem;
     }
-    
+
     .service-features li {
       margin-bottom: 0.75rem;
       display: flex;
       align-items: center;
       gap: 0.5rem;
     }
-    
+
     .service-features i {
       color: var(--success-color);
     }
-    
+
     .service-price {
       display: flex;
       align-items: baseline;
       gap: 0.5rem;
       margin-bottom: 1.5rem;
     }
-    
+
     .service-price span {
       font-size: 0.875rem;
       color: var(--light-text);
     }
-    
+
     .service-price .price {
       font-size: 1.75rem;
       font-weight: 700;
       color: var(--primary-color);
     }
-    
+
     .service-process {
       padding: 6rem 0;
     }
-    
+
     .process-steps {
       max-width: 800px;
       margin: 0 auto;
       position: relative;
     }
-    
+
     .process-steps:before {
       content: '';
       position: absolute;
@@ -375,18 +384,18 @@ import { RouterLink } from '@angular/router';
       width: 2px;
       background: var(--border-color);
     }
-    
+
     .step {
       display: flex;
       gap: 2rem;
       margin-bottom: 3rem;
       position: relative;
     }
-    
+
     .step:last-child {
       margin-bottom: 0;
     }
-    
+
     .step-number {
       width: 80px;
       height: 80px;
@@ -401,27 +410,27 @@ import { RouterLink } from '@angular/router';
       position: relative;
       z-index: 1;
     }
-    
+
     .step-content {
       flex: 1;
       padding-top: 1rem;
     }
-    
+
     .step-content h3 {
       font-size: 1.5rem;
       margin-bottom: 1rem;
     }
-    
+
     .faq {
       padding: 6rem 0;
       background-color: var(--light-bg);
     }
-    
+
     .faq-list {
       max-width: 800px;
       margin: 0 auto;
     }
-    
+
     .faq-item {
       margin-bottom: 1.5rem;
       background: white;
@@ -429,7 +438,7 @@ import { RouterLink } from '@angular/router';
       overflow: hidden;
       box-shadow: var(--shadow);
     }
-    
+
     .faq-question {
       padding: 1.5rem 2rem;
       display: flex;
@@ -438,143 +447,143 @@ import { RouterLink } from '@angular/router';
       cursor: pointer;
       transition: background-color 0.3s;
     }
-    
+
     .faq-question:hover {
       background-color: #f8fafc;
     }
-    
+
     .faq-question h3 {
       font-size: 1.1rem;
       margin: 0;
     }
-    
+
     .faq-answer {
       max-height: 0;
       overflow: hidden;
       transition: max-height 0.3s ease;
     }
-    
+
     .faq-answer.open {
       max-height: 500px;
     }
-    
+
     .faq-answer p {
       padding: 0 2rem 1.5rem;
       margin: 0;
     }
-    
+
     .testimonials {
       padding: 6rem 0;
     }
-    
+
     .testimonials-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 2rem;
     }
-    
+
     .testimonial-card {
       background: white;
       padding: 2rem;
       border-radius: 1rem;
       box-shadow: var(--shadow);
     }
-    
+
     .testimonial-rating {
       color: #f59e0b;
       margin-bottom: 1rem;
     }
-    
+
     .testimonial-text {
       font-style: italic;
       margin-bottom: 1.5rem;
     }
-    
+
     .testimonial-author {
       display: flex;
       align-items: center;
       gap: 1rem;
     }
-    
+
     .testimonial-avatar {
       width: 60px;
       height: 60px;
       border-radius: 50%;
       object-fit: cover;
     }
-    
+
     .testimonial-info h4 {
       font-size: 1.1rem;
       margin-bottom: 0.25rem;
     }
-    
+
     .testimonial-info p {
       font-size: 0.875rem;
       color: var(--light-text);
     }
-    
+
     .cta {
       padding: 5rem 0;
       background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
       color: white;
       text-align: center;
     }
-    
+
     .cta-content {
       max-width: 800px;
       margin: 0 auto;
     }
-    
+
     .cta h2 {
       font-size: 2.5rem;
       margin-bottom: 1rem;
       color: white;
     }
-    
+
     .cta p {
       font-size: 1.25rem;
       margin-bottom: 2rem;
       opacity: 0.9;
     }
-    
+
     .cta-buttons {
       display: flex;
       justify-content: center;
       gap: 1rem;
     }
-    
+
     .btn-outline {
       background: transparent;
       border: 2px solid white;
       color: white;
     }
-    
+
     .btn-outline:hover {
       background: white;
       color: var(--primary-color);
     }
-    
+
     @media (max-width: 992px) {
       .overview-content {
         flex-direction: column;
         gap: 2rem;
       }
-      
+
       .stats-grid {
         grid-template-columns: repeat(2, 1fr);
       }
-      
+
       .services-list,
       .testimonials-grid {
         grid-template-columns: 1fr;
       }
     }
-    
+
     @media (max-width: 768px) {
       .stats-grid {
         grid-template-columns: 1fr;
       }
-      
+
       .cta-buttons {
         flex-direction: column;
         gap: 1rem;
@@ -586,39 +595,39 @@ export class ServicesComponent {
   services = [
     {
       title: 'Reparación de Impresoras',
-      description: 'Servicio técnico especializado para la reparación de todo tipo de impresoras y equipos multifuncionales.',
+      description: 'Servicio técnico especializado para todo tipo de impresoras y multifuncionales con diagnóstico gratuito.',
       icon: 'fas fa-tools',
-      features: [
-        'Diagnóstico gratuito',
-        'Reparación de cualquier marca y modelo',
-        'Garantía en mano de obra y refacciones',
-        'Servicio express disponible'
-      ],
-      price: '499'
+      image: 'https://images.unsplash.com/photo-1586810724476-c294fb7ac01b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
     },
     {
       title: 'Mantenimiento Preventivo',
-      description: 'Planes de mantenimiento preventivo para optimizar el rendimiento y prolongar la vida útil de tus equipos.',
-      icon: 'fas fa-cogs',
-      features: [
-        'Limpieza profunda de componentes',
-        'Lubricación de partes móviles',
-        'Actualización de firmware',
-        'Informe detallado de estado'
-      ],
-      price: '399'
+      description: 'Planes de mantenimiento regulares para evitar fallas y prolongar la vida útil de sus equipos.',
+      icon: 'fas fa-shield-alt',
+      image: 'https://images.unsplash.com/photo-1580901368919-7738efb0f87e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
     },
     {
-      title: 'Servicio a Domicilio',
-      description: 'Asistencia técnica en tu empresa u hogar. Nuestros técnicos acuden a solucionar problemas in situ.',
-      icon: 'fas fa-truck',
-      features: [
-        'Atención en 24-48 horas',
-        'Cobertura en toda la ciudad',
-        'Técnicos certificados',
-        'Servicio disponible 6 días a la semana'
-      ],
-      price: '599'
+      title: 'Venta de Consumibles',
+      description: 'Tóners, cartuchos, tintas y refacciones originales y compatibles con garantía de calidad.',
+      icon: 'fas fa-shopping-cart',
+      image: 'https://images.unsplash.com/photo-1565625415377-8a88517a80f2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
+    },
+    {
+      title: 'Renta de Equipos',
+      description: 'Soluciones de impresión por volumen con equipos de última generación y soporte técnico incluido.',
+      icon: 'fas fa-handshake',
+      image: 'https://images.unsplash.com/photo-1581091877078-3549eda705e7?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
+    },
+    {
+      title: 'Digitalización de Documentos',
+      description: 'Conversión de archivos físicos a digitales con sistemas de organización y búsqueda eficientes.',
+      icon: 'fas fa-file-alt',
+      image: 'https://images.unsplash.com/photo-1576455136694-b9dcdb48d6ee?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
+    },
+    {
+      title: 'Soporte Remoto',
+      description: 'Asistencia técnica a distancia para resolver problemas de configuración e instalación.',
+      icon: 'fas fa-laptop',
+      image: 'https://images.unsplash.com/photo-1573496130407-57329f01f769?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
     }
   ];
 
@@ -675,25 +684,25 @@ export class ServicesComponent {
 
   testimonials = [
     {
-      name: 'Carlos Ramírez',
-      position: 'Director de Operaciones',
-      company: 'Grupo Comercial XYZ',
-      text: 'Hemos trabajado con PrintMaster Solutions durante más de 5 años y siempre han resuelto nuestros problemas de impresión con rapidez y profesionalismo.',
-      avatar: 'assets/images/testimonial-1.jpg'
+      name: 'Laura Martínez',
+      position: 'Gerente de IT',
+      company: 'Constructora Moderna',
+      text: 'El servicio de reparación fue rápido y efectivo. En menos de 24 horas teníamos nuestras impresoras funcionando perfectamente de nuevo.',
+      avatar: 'https://randomuser.me/api/portraits/women/58.jpg'
     },
     {
-      name: 'Ana Gómez',
-      position: 'Gerente Administrativa',
-      company: 'Consultores Asociados',
-      text: 'El servicio de mantenimiento preventivo nos ha ahorrado mucho dinero en reparaciones. Altamente recomendables por su puntualidad y calidad.',
-      avatar: 'assets/images/testimonial-2.jpg'
+      name: 'Miguel Sánchez',
+      position: 'Dueño',
+      company: 'Papelería Central',
+      text: 'Los consumibles que distribuyen son de excelente calidad. Nunca hemos tenido problemas con manchas o fallos y el rendimiento es superior.',
+      avatar: 'https://randomuser.me/api/portraits/men/65.jpg'
     },
     {
-      name: 'Roberto Juárez',
-      position: 'Propietario',
-      company: 'Imprenta Digital Express',
-      text: 'Las refacciones son de excelente calidad y el soporte técnico es inmejorable. Son un socio estratégico para nuestro negocio de impresión.',
-      avatar: 'assets/images/testimonial-3.jpg'
+      name: 'Patricia Hernández',
+      position: 'Administradora',
+      company: 'Despacho Jurídico Hernández',
+      text: 'La digitalización de nuestro archivo histórico fue un proceso impecable. El sistema de búsqueda nos ha ahorrado horas de trabajo.',
+      avatar: 'https://randomuser.me/api/portraits/women/74.jpg'
     }
   ];
 
