@@ -1,0 +1,122 @@
+~/workspace$ npm start
+
+> my-angular-project@0.0.0 start
+> ng serve --host 0.0.0.0
+
+
+Warning: This is a simple server for use in testing or debugging Angular applications
+locally. It hasn't been reviewed for security issues.
+
+Binding this server to an open connection can result in compromising your application or
+computer. Using a different host than the one passed to the "--host" flag might result in
+websocket connection issues. You might need to use "--disable-host-check" if that's the
+case.
+    
+Application bundle generation failed. [16.457 seconds]
+✘ [ERROR] TS2300: Duplicate identifier 'Routes'. [plugin angular-compiler]
+
+    src/app/app.routes.ts:1:9:
+      1 │ import { Routes } from '@angular/router';
+        ╵          ~~~~~~
+
+
+✘ [ERROR] TS2451: Cannot redeclare block-scoped variable 'routes'. [plugin angular-compiler]
+
+    src/app/app.routes.ts:3:13:
+      3 │ export const routes: Routes = [];
+        ╵              ~~~~~~
+
+
+✘ [ERROR] TS2300: Duplicate identifier 'Routes'. [plugin angular-compiler]
+
+    src/app/app.routes.ts:4:9:
+      4 │ import { Routes } from '@angular/router';
+        ╵          ~~~~~~
+
+
+✘ [ERROR] Multiple exports with the same name "routes"
+
+    src/app/app.routes.ts:6:13:
+      6 │ export const routes = [
+        ╵              ~~~~~~
+
+  The name "routes" was originally exported here:
+
+    src/app/app.routes.ts:1:13:
+      1 │ export const routes = [];
+        ╵              ~~~~~~
+
+
+✘ [ERROR] The symbol "routes" has already been declared
+
+    src/app/app.routes.ts:6:13:
+      6 │ export const routes = [
+        ╵              ~~~~~~
+
+  The symbol "routes" was originally declared here:
+
+    src/app/app.routes.ts:1:13:
+      1 │ export const routes = [];
+        ╵              ~~~~~~
+
+
+✘ [ERROR] TS2451: Cannot redeclare block-scoped variable 'routes'. [plugin angular-compiler]
+
+    src/app/app.routes.ts:10:13:
+      10 │ export const routes: Routes = [
+         ╵              ~~~~~~
+
+
+✘ [ERROR] NG5002: Incomplete block "printmaster". If you meant to write the @ character, you should use the "&#64;" HTML entity instead. [plugin angular-compiler]
+
+    src/app/components/contact/contact.component.ts:42:19:
+      42 │             <p>info@printmaster.com<br>soporte@printmaster.com<br>...
+         ╵                    ~~~~~~~~~~~~
+
+
+✘ [ERROR] NG5002: Incomplete block "printmaster". If you meant to write the @ character, you should use the "&#64;" HTML entity instead. [plugin angular-compiler]
+
+    src/app/components/contact/contact.component.ts:42:46:
+      42 │ ...printmaster.com<br>soporte@printmaster.com<br>ventas@printmaste...
+         ╵                              ~~~~~~~~~~~~
+
+
+✘ [ERROR] NG5002: Incomplete block "printmaster". If you meant to write the @ character, you should use the "&#64;" HTML entity instead. [plugin angular-compiler]
+
+    src/app/components/contact/contact.component.ts:42:72:
+      42 │ ...aster.com<br>soporte@printmaster.com<br>ventas@printmaster.com</p>
+         ╵                                                  ~~~~~~~~~~~~
+
+
+✘ [ERROR] NG5002: Incomplete block "printmaster". If you meant to write the @ character, you should use the "&#64;" HTML entity instead. [plugin angular-compiler]
+
+    src/app/components/footer/footer.component.ts:48:45:
+      48 │               <p><strong>Email:</strong> info@printmaster.com</p>
+         ╵                                              ~~~~~~~~~~~~
+
+
+✘ [ERROR] Multiple exports with the same name "routes"
+
+    src/app/app.routes.ts:6:13:
+      6 │ export const routes = [
+        ╵              ~~~~~~
+
+  The name "routes" was originally exported here:
+
+    src/app/app.routes.ts:1:13:
+      1 │ export const routes = [];
+        ╵              ~~~~~~
+
+
+✘ [ERROR] The symbol "routes" has already been declared
+
+    src/app/app.routes.ts:6:13:
+      6 │ export const routes = [
+        ╵              ~~~~~~
+
+  The symbol "routes" was originally declared here:
+
+    src/app/app.routes.ts:1:13:
+      1 │ export const routes = [];
+        ╵              ~~~~~~
+
