@@ -597,37 +597,49 @@ export class ServicesComponent {
       title: 'Reparación de Impresoras',
       description: 'Servicio técnico especializado para todo tipo de impresoras y multifuncionales con diagnóstico gratuito.',
       icon: 'fas fa-tools',
-      image: 'https://images.unsplash.com/photo-1586810724476-c294fb7ac01b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
+      image: 'https://images.unsplash.com/photo-1586810724476-c294fb7ac01b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+      features: ['Diagnóstico gratuito', 'Garantía de 3 meses', 'Refacciones originales', 'Servicio a domicilio'],
+      price: '499.00'
     },
     {
       title: 'Mantenimiento Preventivo',
       description: 'Planes de mantenimiento regulares para evitar fallas y prolongar la vida útil de sus equipos.',
       icon: 'fas fa-shield-alt',
-      image: 'https://images.unsplash.com/photo-1580901368919-7738efb0f87e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
+      image: 'https://images.unsplash.com/photo-1580901368919-7738efb0f87e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+      features: ['Limpieza profunda', 'Lubricación de partes', 'Calibración', 'Reporte de estado'],
+      price: '699.00'
     },
     {
       title: 'Venta de Consumibles',
       description: 'Tóners, cartuchos, tintas y refacciones originales y compatibles con garantía de calidad.',
       icon: 'fas fa-shopping-cart',
-      image: 'https://images.unsplash.com/photo-1565625415377-8a88517a80f2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
+      image: 'https://images.unsplash.com/photo-1565625415377-8a88517a80f2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+      features: ['Entrega a domicilio', 'Facturación inmediata', 'Mayoreo y menudeo', 'Marcas originales'],
+      price: '299.00'
     },
     {
       title: 'Renta de Equipos',
       description: 'Soluciones de impresión por volumen con equipos de última generación y soporte técnico incluido.',
       icon: 'fas fa-handshake',
-      image: 'https://images.unsplash.com/photo-1581091877078-3549eda705e7?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
+      image: 'https://images.unsplash.com/photo-1581091877078-3549eda705e7?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+      features: ['Contratos flexibles', 'Mantenimiento incluido', 'Consumibles incluidos', 'Soporte técnico 24/7'],
+      price: '1,499.00'
     },
     {
       title: 'Digitalización de Documentos',
       description: 'Conversión de archivos físicos a digitales con sistemas de organización y búsqueda eficientes.',
       icon: 'fas fa-file-alt',
-      image: 'https://images.unsplash.com/photo-1576455136694-b9dcdb48d6ee?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
+      image: 'https://images.unsplash.com/photo-1576455136694-b9dcdb48d6ee?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+      features: ['OCR incluido', 'Indexado de documentos', 'Almacenamiento en la nube', 'Confidencialidad garantizada'],
+      price: '2.50'
     },
     {
       title: 'Soporte Remoto',
       description: 'Asistencia técnica a distancia para resolver problemas de configuración e instalación.',
       icon: 'fas fa-laptop',
-      image: 'https://images.unsplash.com/photo-1573496130407-57329f01f769?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
+      image: 'https://images.unsplash.com/photo-1573496130407-57329f01f769?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+      features: ['Respuesta inmediata', 'Conexión segura', 'Asistencia en tiempo real', 'Disponible 24/7'],
+      price: '299.00'
     }
   ];
 
