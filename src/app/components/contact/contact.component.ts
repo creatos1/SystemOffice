@@ -39,7 +39,7 @@ import { FormsModule } from '@angular/forms';
               <i class="fas fa-envelope"></i>
             </div>
             <h3>Escríbenos</h3>
-            <p>info@printmaster.com<br>soporte@printmaster.com<br>ventas@printmaster.com</p>
+            <p>info&#64;printmaster.com<br>soporte&#64;printmaster.com<br>ventas&#64;printmaster.com</p>
           </div>
           
           <div class="info-card">

@@ -1,16 +1,10 @@
-import { Routes } from '@angular/router';
 
-export const routes: Routes = [];
 import { Routes } from '@angular/router';
-import { HomeComponent } from './components/home/home.component';
-import { ProductsComponent } from './components/products/products.component';
-import { ServicesComponent } from './components/services/services.component';
-import { ContactComponent } from './components/contact/contact.component';
 
 export const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'productos', component: ProductsComponent },
-  { path: 'servicios', component: ServicesComponent },
-  { path: 'contacto', component: ContactComponent },
-  { path: '**', redirectTo: '' }
+  { path: '', redirectTo: '/inicio', pathMatch: 'full' },
+  { path: 'inicio', loadComponent: () => import('./components/home/home.component').then(m => m.HomeComponent) },
+  { path: 'productos', loadComponent: () => import('./components/products/products.component').then(m => m.ProductsComponent) },
+  { path: 'servicios', loadComponent: () => import('./components/services/services.component').then(m => m.ServicesComponent) },
+  { path: 'contacto', loadComponent: () => import('./components/contact/contact.component').then(m => m.ContactComponent) }
 ];

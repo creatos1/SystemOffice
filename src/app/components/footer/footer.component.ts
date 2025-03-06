@@ -45,7 +45,7 @@ import { RouterLink } from '@angular/router';
             
             <div class="footer-column">
               <h3>Contacto</h3>
-              <p><strong>Email:</strong> info@printmaster.com</p>
+              <p><strong>Email:</strong> info&#64;printmaster.com</p>
               <p><strong>Teléfono:</strong> (55) 1234-5678</p>
               <p><strong>Dirección:</strong> Av. Tecnología #123, Col. Digital, Ciudad de México</p>
             </div>
