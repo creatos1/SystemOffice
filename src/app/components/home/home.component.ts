@@ -11,7 +11,7 @@ import { RouterLink } from '@angular/router';
       <div class="container">
         <div class="hero-content">
           <h1 class="animate-fade-in">Soluciones Integrales en Impresión</h1>
-          <p class="hero-subtitle animate-fade-in">Equipos, refacciones, servicio técnico y más</p>
+          <p class="hero-subtitle animate-fade-in">Venta, Renta y Reparación de equipos.</p>
           <div class="hero-buttons animate-fade-in">
             <a routerLink="/productos" class="btn btn-primary">Ver Productos</a>
             <a routerLink="/servicios" class="btn btn-outline">Nuestros Servicios</a>
@@ -158,7 +158,7 @@ import { RouterLink } from '@angular/router';
     <section class="brands">
       <div class="container">
         <div class="section-header">
-          <h2>Marcas que distribuimos</h2>
+          <h2>Marcas que comercializamos</h2>
         </div>
 
         <div class="brands-slider">
@@ -710,11 +710,9 @@ export class HomeComponent {
   ];
 
   brands = [
-    { name: 'HP', logo: 'assets/images/brand-hp.png' },
-    { name: 'Canon', logo: 'assets/images/brand-canon.png' },
-    { name: 'Epson', logo: 'assets/images/brand-epson.png' },
-    { name: 'Brother', logo: 'assets/images/brand-brother.png' },
-    { name: 'Xerox', logo: 'assets/images/brand-xerox.png' },
-    { name: 'Samsung', logo: 'assets/images/brand-samsung.png' }
+    { name: 'Ricoh', logo: 'https://1000marcas.net/wp-content/uploads/2020/03/Logo-Ricoh.png' },
+    { name: 'Kyocera', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Kyocera_logo.svg/1280px-Kyocera_logo.svg.png' },
+    { name: 'Konica', logo: 'https://upload.wikimedia.org/wikipedia/commons/9/9d/Konica_Logo.svg' }
   ];
+  
 }

@@ -13,8 +13,7 @@ import { CommonModule } from '@angular/common';
         <div class="header-content">
           <div class="logo">
             <a routerLink="/">
-              <span class="logo-text">PrintMaster</span>
-              <span class="logo-accent">Solutions</span>
+              <img src="../../../assets/images/logo.jpeg">
             </a>
           </div>
           
@@ -24,11 +23,12 @@ import { CommonModule } from '@angular/common';
               <li><a routerLink="/productos" routerLinkActive="active">Productos</a></li>
               <li><a routerLink="/servicios" routerLinkActive="active">Servicios</a></li>
               <li><a routerLink="/contacto" routerLinkActive="active">Contacto</a></li>
+              <li><a routerLink="/soporte" routerLinkActive="active">Soporte</a></li>
             </ul>
           </nav>
           
           <div class="header-actions">
-            <button class="btn btn-primary">Cotizar Ahora</button>
+            
             <div class="menu-toggle" (click)="toggleMenu()">
               <span [class.active]="menuOpen"></span>
             </div>
@@ -38,6 +38,7 @@ import { CommonModule } from '@angular/common';
     </header>
   `,
   styles: [`
+
     .header {
       position: fixed;
       top: 0;
@@ -56,6 +57,7 @@ import { CommonModule } from '@angular/common';
     }
     
     .logo a {
+      width:80%;
       display: flex;
       align-items: center;
       text-decoration: none;
