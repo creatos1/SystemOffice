@@ -844,7 +844,19 @@ export class ProductsComponent {
 
   constructor(private printerService: PrinterService) {
     this.printers = this.printerService.getPrinters();
-    this.filteredProducts = [...this.printers];
+    this.products = this.printers.map(printer => ({
+      id: printer.id,
+      name: printer.model,
+      category: 'Impresora Multifuncional',
+      brand: printer.brand.toLowerCase(),
+      image: printer.image,
+      isNew: false,
+      rating: 4.5,
+      reviewCount: 0,
+      description: `${printer.model} - ${printer.characteristics.paperSize} - ${printer.characteristics.speed}`,
+      functions: printer.functions
+    }));
+    this.filteredProducts = [...this.products];
     this.totalPages = Math.ceil(this.filteredProducts.length / this.itemsPerPage);
   }
   showModal = false;
