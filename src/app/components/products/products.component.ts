@@ -841,6 +841,105 @@ export class ProductsComponent {
         // Add more printers here...
   ];
 
+  products = [
+    {
+      id: 1,
+      name: 'MP C2003',
+      category: 'Impresora Multifuncional',
+      brand: 'Ricoh',
+      condition: 'Seminuevo',
+      image: 'assets/images/mp-c2003.jpg',
+      isNew: false,
+      rating: 4.5,
+      reviewCount: 45,
+      characteristics: {
+        paperSize: 'A3 (11.7" × 16.5")',
+        color: 'Color',
+        speed: '20 - 29 ppm',
+        resolution: '1200 x 1200 px',
+        tonerYieldBW: '15,000 impresiones',
+        tonerYieldColor: '90,000 impresiones',
+        monthlyDutyCycle: '600,000 pág. por mes'
+      }
+    },
+    {
+      id: 2,
+      name: 'MP C4504',
+      category: 'Impresora Multifuncional',
+      brand: 'Ricoh',
+      condition: 'Seminuevo',
+      image: 'assets/images/mp-c4504.jpg',
+      isNew: false,
+      rating: 4.7,
+      reviewCount: 38,
+      characteristics: {
+        paperSize: 'A3 (11.7" × 16.5")',
+        color: 'Color',
+        speed: '40 - 49 ppm',
+        resolution: '1200 x 1200 px',
+        tonerYieldBW: '33,000 impresiones',
+        tonerYieldColor: '22,500 impresiones',
+        monthlyDutyCycle: '80,000 pág. por mes'
+      }
+    },
+    {
+      id: 3,
+      name: 'MP 6054',
+      category: 'Impresora Multifuncional',
+      brand: 'Ricoh',
+      condition: 'Seminuevo',
+      image: 'assets/images/mp-6054.jpg',
+      isNew: false,
+      rating: 4.8,
+      reviewCount: 52,
+      characteristics: {
+        paperSize: 'A3 (11.7" × 16.5")',
+        color: 'Blanco y negro',
+        speed: '60 - 69 ppm',
+        resolution: '1200 x 1200 px',
+        tonerYieldBW: '37,000 impresiones',
+        monthlyDutyCycle: '300,000 impresiones'
+      }
+    },
+    {
+      id: 4,
+      name: 'ECOSYS M3040',
+      category: 'Impresora Multifuncional',
+      brand: 'Kyocera',
+      condition: 'Seminuevo',
+      image: 'assets/images/ecosys-m3040.jpg',
+      isNew: false,
+      rating: 4.3,
+      reviewCount: 29,
+      characteristics: {
+        paperSize: 'A4 (8.3" × 11.7")',
+        color: 'Blanco y negro',
+        speed: '40 - 49 ppm',
+        resolution: '600 x 600 px',
+        monthlyDutyCycle: '150,000 pág. por mes'
+      }
+    },
+    {
+      id: 5,
+      name: 'ECOSYS M3550',
+      category: 'Impresora Multifuncional',
+      brand: 'Kyocera',
+      condition: 'Seminuevo',
+      image: 'assets/images/ecosys-m3550.jpg',
+      isNew: false,
+      rating: 4.6,
+      reviewCount: 34,
+      characteristics: {
+        paperSize: 'A4 (8.3" × 11.7")',
+        color: 'Blanco y negro',
+        speed: '50 - 59 ppm',
+        resolution: '1200 x 1200 px',
+        monthlyDutyCycle: '250,000 pág. por mes'
+      }
+    },
+    // Previous products...
+  ];
+
   brands = [
     {
       name: 'Ricoh',
