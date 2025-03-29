@@ -1,6 +1,5 @@
-entrypoint = "server.ts"
-run = "npm run start"
-modules = ["angular-node-20"]
+run = "npm run watch"
+modules = ["nodejs-20", "web"]
 
 [nix]
 channel = "stable-24_05"
@@ -23,3 +22,6 @@ author = 40247609
 [[workflows.workflow.tasks]]
 task = "shell.exec"
 args = "npm start"
+
+[deployment]
+run = ["sh", "-c", "npm run watch"]
