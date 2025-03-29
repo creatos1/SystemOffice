@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { PrinterService } from '../../services/printer.service';
+import { Printer } from '../../models/printer.interface';
 
 @Component({
   selector: 'app-products',
@@ -37,6 +39,20 @@ import { RouterLink } from '@angular/router';
 
         <div class="products-list">
           <h2>Nuestras Impresoras</h2>
+          <div class="products-grid">
+            <div class="product-card" *ngFor="let printer of printers">
+              <img [src]="printer.image" [alt]="printer.model">
+              <div class="product-info">
+                <h3>{{ printer.model }}</h3>
+                <p class="brand">{{ printer.brand }}</p>
+                <p class="condition">{{ printer.condition }}</p>
+                <ul class="features">
+                  <li *ngFor="let function of printer.functions">{{ function }}</li>
+                </ul>
+                <a [routerLink]="['/impresora', printer.id]" class="details-btn">Ver detalles</a>
+              </div>
+            </div>
+          </div>2>
 
           <div class="products-wrapper">
             <div class="product-card" *ngFor="let product of filteredProducts">
@@ -181,6 +197,85 @@ import { RouterLink } from '@angular/router';
         align-items: center;
         gap: 0.5rem;
       }
+
+  styles: [`
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 2rem;
+      padding: 2rem 0;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.2s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: contain;
+      padding: 1rem;
+    }
+
+    .product-info {
+      padding: 1.5rem;
+    }
+
+    .product-info h3 {
+      margin: 0 0 0.5rem;
+      font-size: 1.25rem;
+    }
+
+    .brand, .condition {
+      display: inline-block;
+      padding: 0.25rem 0.5rem;
+      margin: 0.25rem;
+      background: #f5f5f5;
+      border-radius: 4px;
+      font-size: 0.875rem;
+    }
+
+    .features {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0;
+    }
+
+    .features li {
+      padding: 0.25rem 0;
+      font-size: 0.875rem;
+      color: #666;
+    }
+
+    .details-btn {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background: #0066cc;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background 0.2s;
+    }
+
+    .details-btn:hover {
+      background: #0052a3;
+    }
+
+    @media (max-width: 768px) {
+      .products-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  `]
+
 
       .filter-group label {
         font-weight: 500;
@@ -607,7 +702,15 @@ import { RouterLink } from '@angular/router';
     `,
   ],
 })
-export class ProductsComponent {
+export class ProductsComponent implements OnInit {
+  printers: Printer[] = [];
+
+  constructor(private printerService: PrinterService) {}
+
+  ngOnInit() {
+    this.printers = this.printerService.getPrinters();
+  }
+
   categories = [
     {
       name: 'Impresoras',
