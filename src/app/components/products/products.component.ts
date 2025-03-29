@@ -79,9 +79,10 @@ import { Printer } from '../../models/printer.interface';
                   ></i>
                   <span class="rating-count">({{ product.reviewCount }})</span>
                 </div>
-                <a href="tel:+524491298900" class="btn btn-primary product-btn"
-                  >Cotizar</a
-                >
+                <div class="product-buttons">
+                  <a href="tel:+524491298900" class="btn btn-primary product-btn">Cotizar</a>
+                  <button class="btn btn-secondary product-btn" (click)="showDetails(product)">Detalles</button>
+                </div>
               </div>
             </div>
           </div>
@@ -135,6 +136,13 @@ import { Printer } from '../../models/printer.interface';
         <span class="close" (click)="closeModal()">&times;</span>
         <h2>{{ selectedPrinter?.name }}</h2>
         <p>{{ selectedPrinter?.description }}</p> </div>
+    </div>
+    <div class="modal" [class.show]="showDetailsModal">
+      <div class="modal-content">
+        <span class="close" (click)="closeDetailsModal()">&times;</span>
+        <h2>{{ selectedProduct?.name }}</h2>
+        <p>{{ selectedProduct?.description }}</p>
+      </div>
     </div>
   `,
   styles: [
@@ -448,14 +456,26 @@ import { Printer } from '../../models/printer.interface';
       }
 
       .product-buttons {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 0.75rem;
+        display: flex;
+        gap: 1rem;
+        margin-top: 1rem;
       }
 
       .product-btn {
-        font-size: 0.875rem;
-        padding: 0.5rem 0;
+        flex: 1;
+        padding: 0.5rem 1rem;
+        text-align: center;
+        text-decoration: none;
+      }
+
+      .btn-secondary {
+        background: #f3f4f6;
+        color: var(--text-color);
+        border: 1px solid #e5e7eb;
+      }
+
+      .btn-secondary:hover {
+        background: #e5e7eb;
       }
 
       .pagination {
@@ -841,6 +861,8 @@ export class ProductsComponent {
   currentPage = 1;
   itemsPerPage = 8;
   totalPages = 1;
+  showDetailsModal = false;
+  selectedProduct: any = null;
 
   constructor(private printerService: PrinterService) {
     this.printers = this.printerService.getPrinters();
@@ -930,7 +952,7 @@ export class ProductsComponent {
   }
 
   paginationArray() {
-    return Array.from({ length: this.totalPages }, (_, i) => i + 1);
+    return Array.from({ length: this.totalPages }, (_, i)) => i + 1);
   }
 
   showDescription(printer: any) {
@@ -941,5 +963,15 @@ export class ProductsComponent {
   closeModal() {
     this.showModal = false;
     this.selectedPrinter = null;
+  }
+
+  showDetails(product: any) {
+    this.selectedProduct = product;
+    this.showDetailsModal = true;
+  }
+
+  closeDetailsModal() {
+    this.showDetailsModal = false;
+    this.selectedProduct = null;
   }
 }
