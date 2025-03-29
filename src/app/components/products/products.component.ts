@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { PrinterService } from '../../services/printer.service';
+import { Printer } from '../../models/printer.interface';
 
 @Component({
   selector: 'app-products',
@@ -834,10 +836,17 @@ export class ProductsComponent {
     },
   ];
 
-  filteredProducts = [...this.products];
+  printers: Printer[] = [];
+  filteredProducts: any[] = [];
   currentPage = 1;
   itemsPerPage = 8;
-  totalPages = Math.ceil(this.products.length / this.itemsPerPage);
+  totalPages = 1;
+
+  constructor(private printerService: PrinterService) {
+    this.printers = this.printerService.getPrinters();
+    this.filteredProducts = [...this.printers];
+    this.totalPages = Math.ceil(this.filteredProducts.length / this.itemsPerPage);
+  }
   showModal = false;
   selectedPrinter: any = null;
 
