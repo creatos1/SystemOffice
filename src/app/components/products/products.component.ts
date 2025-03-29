@@ -845,16 +845,18 @@ export class ProductsComponent {
   constructor(private printerService: PrinterService) {
     this.printers = this.printerService.getPrinters();
     this.products = this.printers.map(printer => ({
-      id: printer.id,
+      id: parseInt(printer.id.replace(/\D/g, '')) || 1,
       name: printer.model,
       category: 'Impresora Multifuncional',
       brand: printer.brand.toLowerCase(),
+      price: 9999,
+      oldPrice: 10999,
       image: printer.image,
       isNew: false,
+      discount: 10,
       rating: 4.5,
       reviewCount: 0,
-      description: `${printer.model} - ${printer.characteristics.paperSize} - ${printer.characteristics.speed}`,
-      functions: printer.functions
+      description: `${printer.model} - ${printer.characteristics.paperSize} - ${printer.characteristics.speed}`
     }));
     this.filteredProducts = [...this.products];
     this.totalPages = Math.ceil(this.filteredProducts.length / this.itemsPerPage);

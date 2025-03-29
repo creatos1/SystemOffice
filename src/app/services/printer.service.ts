@@ -34,10 +34,7 @@ export class PrinterService {
         resolution: '1200 x 1200 px',
         additionalFeatures: {
           warmupTime: '25 segundos',
-          printSpeed: {
-            color: '7.5 segundos',
-            bw: '5.3 segundos'
-          }
+          printSpeed: '7.5 segundos color / 5.3 segundos b/n'
         }
       },
       image: 'https://raw.githubusercontent.com/tu-repo/images/main/mp-c2504.jpg'
