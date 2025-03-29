@@ -1,0 +1,48 @@
+ 
+Application bundle generation failed. [19.569 seconds]
+✘ [ERROR] NG5: Argument of type 'unknown' is not assignable to parameter of type 'number'. [plugin angular-compiler]
+
+    src/app/components/products/products.component.ts:103:36:
+      103 │                 (click)="changePage(page)"
+          ╵                                     ~~~~
+
+
+✘ [ERROR] TS2304: Cannot find name '_'. [plugin angular-compiler]
+
+    src/app/components/products/products.component.ts:955:52:
+      955 │ ...return Array.from({ length: this.totalPages }, (_, i)) => i + 1);
+          ╵                                                    ^
+
+
+✘ [ERROR] TS2695: Left side of comma operator is unused and has no side effects. [plugin angular-compiler]
+
+    src/app/components/products/products.component.ts:955:52:
+      955 │ ...return Array.from({ length: this.totalPages }, (_, i)) => i + 1);
+          ╵                                                    ^
+
+
+✘ [ERROR] TS2304: Cannot find name 'i'. [plugin angular-compiler]
+
+    src/app/components/products/products.component.ts:955:55:
+      955 │ ...return Array.from({ length: this.totalPages }, (_, i)) => i + 1);
+          ╵                                                       ^
+
+
+✘ [ERROR] TS1005: ';' expected. [plugin angular-compiler]
+
+    src/app/components/products/products.component.ts:955:59:
+      955 │ ...return Array.from({ length: this.totalPages }, (_, i)) => i + 1);
+          ╵                                                           ~~
+
+
+✘ [ERROR] TS2304: Cannot find name 'i'. [plugin angular-compiler]
+
+    src/app/components/products/products.component.ts:955:62:
+      955 │ ...return Array.from({ length: this.totalPages }, (_, i)) => i + 1);
+          ╵                                                              ^
+
+
+✘ [ERROR] TS1005: ';' expected. [plugin angular-compiler]
+
+    src/app/components/products/products.component.ts:955:67:
+      955 │ ...return Array.from({ length: this.totalPages }, (_, i)) => i + 1);
