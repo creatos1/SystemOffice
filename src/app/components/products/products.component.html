@@ -1,0 +1,53 @@
+<div class="products-grid">
+  <div *ngFor="let printer of printerProducts" class="product-card">
+    <img [src]="printer.image" [alt]="printer.name">
+    <div class="product-info">
+      <h3>{{ printer.name }}</h3>
+      <span class="brand">{{ printer.brand }}</span>
+      <span class="condition">{{ printer.condition }}</span>
+      <ul class="features">
+        <li *ngFor="let function of printer.functions">{{ function }}</li>
+      </ul>
+      <button class="details-btn" (click)="showDescription(printer)">
+        Mostrar Descripción
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal de descripción -->
+<div class="modal" *ngIf="showModal">
+  <div class="modal-content">
+    <span class="close" (click)="closeModal()">&times;</span>
+    <div *ngIf="selectedPrinter">
+      <h2>{{ selectedPrinter.name }}</h2>
+      <div class="printer-details">
+        <h3>Características:</h3>
+        <ul>
+          <li>Tamaño de papel: {{ selectedPrinter.characteristics.paperSize }}</li>
+          <li>Color: {{ selectedPrinter.characteristics.color }}</li>
+          <li>Velocidad: {{ selectedPrinter.characteristics.speed }}</li>
+          <li>Resolución: {{ selectedPrinter.characteristics.resolution }}</li>
+          <li *ngIf="selectedPrinter.characteristics.warmupTime">
+            Tiempo de calentamiento: {{ selectedPrinter.characteristics.warmupTime }}
+          </li>
+          <li *ngIf="selectedPrinter.characteristics.printSpeed">
+            Velocidad de impresión: {{ selectedPrinter.characteristics.printSpeed }}
+          </li>
+          <li *ngIf="selectedPrinter.characteristics.tonerYieldBW">
+            Rendimiento tóner B/N: {{ selectedPrinter.characteristics.tonerYieldBW }}
+          </li>
+          <li *ngIf="selectedPrinter.characteristics.tonerYieldColor">
+            Rendimiento tóner color: {{ selectedPrinter.characteristics.tonerYieldColor }}
+          </li>
+          <li *ngIf="selectedPrinter.characteristics.monthlyDutyCycle">
+            Ciclo mensual: {{ selectedPrinter.characteristics.monthlyDutyCycle }}
+          </li>
+          <li *ngIf="selectedPrinter.characteristics.screenSize">
+            Pantalla: {{ selectedPrinter.characteristics.screenSize }}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

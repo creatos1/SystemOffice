@@ -61,6 +61,9 @@ import { RouterLink } from '@angular/router';
                   <button class="action-btn" title="Favorito">
                     <i class="far fa-heart"></i>
                   </button>
+                  <button (click)="showDescription(product)" class="action-btn" title="Mostrar Descripción">
+                    <i class="fas fa-info-circle"></i>
+                  </button>
                 </div>
               </div>
               <div class="product-info">
@@ -124,6 +127,13 @@ import { RouterLink } from '@angular/router';
         </div>
       </div>
     </section>
+
+    <div class="modal" [class.show]="showModal">
+      <div class="modal-content">
+        <span class="close" (click)="closeModal()">&times;</span>
+        <h2>{{ selectedPrinter?.name }}</h2>
+        <p>{{ selectedPrinter?.description }}</p> </div>
+    </div>
   `,
   styles: [
     `
@@ -604,6 +614,44 @@ import { RouterLink } from '@angular/router';
           grid-template-columns: 1fr;
         }
       }
+
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+      }
+
+      .modal.show {
+        display: block;
+      }
+
+      .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+      }
+
+      .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+      }
     `,
   ],
 })
@@ -615,42 +663,36 @@ export class ProductsComponent {
       icon: 'fas fa-print',
       productCount: 24,
     },
-    /*  
-    const categorias = [
-      {
-        name: 'Multifuncionales', // Nombre de la categoría
-        slug: 'multifuncionales', // Identificador único para URL
-        icon: 'fas fa-copy', // Clases de FontAwesome para el icono
-        productCount: 18, // Número de productos en esta categoría
-      },
-      {
-        name: 'Escáners',
-        slug: 'escaners',
-        icon: 'fas fa-scanner',
-        productCount: 12,
-      },
-      {
-        name: 'Plotters',
-        slug: 'plotters',
-        icon: 'fas fa-drafting-compass',
-        productCount: 8,
-      },
-      {
-        name: 'Refacciones',
-        slug: 'refacciones',
-        icon: 'fas fa-cogs',
-        productCount: 65,
-      },
-      {
-        name: 'Tintas y Toners',
-        slug: 'tintas',
-        icon: 'fas fa-tint',
-        productCount: 47,
-      },
-    ];
-
-    console.log(categorias); // Imprime la lista de categorías en la consola
-    */
+    {
+      name: 'Multifuncionales',
+      slug: 'multifuncionales',
+      icon: 'fas fa-copy',
+      productCount: 18,
+    },
+    {
+      name: 'Escáners',
+      slug: 'escaners',
+      icon: 'fas fa-scanner',
+      productCount: 12,
+    },
+    {
+      name: 'Plotters',
+      slug: 'plotters',
+      icon: 'fas fa-drafting-compass',
+      productCount: 8,
+    },
+    {
+      name: 'Refacciones',
+      slug: 'refacciones',
+      icon: 'fas fa-cogs',
+      productCount: 65,
+    },
+    {
+      name: 'Tintas y Toners',
+      slug: 'tintas',
+      icon: 'fas fa-tint',
+      productCount: 47,
+    },
   ];
 
   products = [
@@ -667,6 +709,7 @@ export class ProductsComponent {
       discount: 11,
       rating: 4.8,
       reviewCount: 124,
+      description: 'Descripción de la impresora HP LaserJet Pro M404dw',
     },
     {
       id: 2,
@@ -681,6 +724,7 @@ export class ProductsComponent {
       discount: null,
       rating: 4.6,
       reviewCount: 89,
+      description: 'Descripción de la impresora Epson EcoTank L3250',
     },
     {
       id: 3,
@@ -695,6 +739,7 @@ export class ProductsComponent {
       discount: 10,
       rating: 4.7,
       reviewCount: 78,
+      description: 'Descripción de la impresora Brother MFC-L3750CDW',
     },
     {
       id: 4,
@@ -709,6 +754,7 @@ export class ProductsComponent {
       discount: null,
       rating: 4.5,
       reviewCount: 65,
+      description: 'Descripción de la impresora Canon PIXMA G6020',
     },
     {
       id: 5,
@@ -723,6 +769,7 @@ export class ProductsComponent {
       discount: 12,
       rating: 4.9,
       reviewCount: 37,
+      description: 'Descripción de la impresora Xerox VersaLink C500',
     },
     {
       id: 6,
@@ -737,6 +784,7 @@ export class ProductsComponent {
       discount: 13,
       rating: 4.3,
       reviewCount: 142,
+      description: 'Descripción de la impresora Samsung Xpress M2020W',
     },
     {
       id: 7,
@@ -751,6 +799,7 @@ export class ProductsComponent {
       discount: null,
       rating: 4.7,
       reviewCount: 19,
+      description: 'Descripción de la impresora HP DesignJet T650',
     },
     {
       id: 8,
@@ -765,7 +814,9 @@ export class ProductsComponent {
       discount: 9,
       rating: 4.6,
       reviewCount: 28,
+      description: 'Descripción de la impresora Epson SureColor T3170',
     },
+        // Add more printers here...
   ];
 
   brands = [
@@ -787,6 +838,9 @@ export class ProductsComponent {
   currentPage = 1;
   itemsPerPage = 8;
   totalPages = Math.ceil(this.products.length / this.itemsPerPage);
+  showModal = false;
+  selectedPrinter: any = null;
+
 
   filterProducts(type: string, event: Event) {
     const value = (event.target as HTMLSelectElement).value;
@@ -854,5 +908,15 @@ export class ProductsComponent {
 
   paginationArray() {
     return Array.from({ length: this.totalPages }, (_, i) => i + 1);
+  }
+
+  showDescription(printer: any) {
+    this.selectedPrinter = printer;
+    this.showModal = true;
+  }
+
+  closeModal() {
+    this.showModal = false;
+    this.selectedPrinter = null;
   }
 }
