@@ -198,64 +198,55 @@ import { Printer } from '../../models/printer.interface';
         gap: 0.5rem;
       }
 
-  styles: [`
-    .products-grid {
+  styles: [
+    `.products-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
       gap: 2rem;
       padding: 2rem 0;
-    }
-
-    .product-card {
+    }`,
+    `.product-card {
       background: white;
       border-radius: 8px;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
       overflow: hidden;
       transition: transform 0.2s;
-    }
-
-    .product-card:hover {
+    }`,
+    `.product-card:hover {
       transform: translateY(-5px);
-    }
-
-    .product-card img {
+    }`,
+    `.product-card img {
       width: 100%;
       height: 200px;
       object-fit: contain;
       padding: 1rem;
-    }
-
-    .product-info {
+    }`,
+    `.product-info {
       padding: 1.5rem;
-    }
-
-    .product-info h3 {
+    }`,
+    `.product-info h3 {
       margin: 0 0 0.5rem;
       font-size: 1.25rem;
-    }
-
-    .brand, .condition {
+    }`,
+    `.brand, .condition {
       display: inline-block;
       padding: 0.25rem 0.5rem;
       margin: 0.25rem;
       background: #f5f5f5;
       border-radius: 4px;
       font-size: 0.875rem;
-    }
-
-    .features {
+    }`,
+    `.features {
       list-style: none;
       padding: 0;
       margin: 1rem 0;
-    }
-
-    .features li {
+    }`,
+    `.features li {
       padding: 0.25rem 0;
       font-size: 0.875rem;
       color: #666;
-    }
-
-    .details-btn {
+    }`,
+    `.details-btn {
       display: inline-block;
       padding: 0.5rem 1rem;
       background: #0066cc;
@@ -263,18 +254,16 @@ import { Printer } from '../../models/printer.interface';
       text-decoration: none;
       border-radius: 4px;
       transition: background 0.2s;
-    }
-
-    .details-btn:hover {
+    }`,
+    `.details-btn:hover {
       background: #0052a3;
-    }
-
-    @media (max-width: 768px) {
+    }`,
+    `@media (max-width: 768px) {
       .products-grid {
         grid-template-columns: 1fr;
       }
-    }
-  `]
+    }`
+  ]
 
 
       .filter-group label {
