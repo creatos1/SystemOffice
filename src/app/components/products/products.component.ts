@@ -947,12 +947,14 @@ export class ProductsComponent {
     this.currentPage = 1;
   }
 
-  changePage(page: number) {
-    this.currentPage = page;
+  changePage(page: unknown) {
+    if (typeof page === 'number') {
+      this.currentPage = page;
+    }
   }
 
-  paginationArray() {
-    return Array.from({ length: this.totalPages }, (_, i)) => i + 1);
+  paginationArray(): number[] {
+    return Array.from({ length: this.totalPages }, (_, i) => i + 1);
   }
 
   showDescription(printer: any) {
