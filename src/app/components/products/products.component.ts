@@ -1178,12 +1178,6 @@ export class ProductsComponent {
     this.currentPage = 1;
   }
 
-  changePage(page: number): void {
-    if (page >= 1 && page <= this.totalPages) {
-      this.currentPage = page;
-    }
-  }
-
   paginationArray(): number[] {
     return Array.from({ length: this.totalPages }, (_, i) => i + 1);
   }
