@@ -1,0 +1,79 @@
+Application bundle generation failed. [19.270 seconds]
+✘ [ERROR] Expected ":" but found "1200"
+
+    src/app/components/products/products.component.ts:446:57:
+      446 │ ...          speed: '', 70: ppm, ',: resolution, '1200 x 3600 px': ,
+          │                                                   ~~~~
+          ╵                                                   :
+
+
+✘ [ERROR] TS1005: ',' expected. [plugin angular-compiler]
+
+    src/app/components/products/products.component.ts:991:17:
+      991 │         speed: ''70 ppm',
+          ╵                  ~~
+
+
+✘ [ERROR] TS1005: ':' expected. [plugin angular-compiler]
+
+    src/app/components/products/products.component.ts:991:20:
+      991 │         speed: ''70 ppm',
+          ╵                     ~~~
+
+
+✘ [ERROR] TS2304: Cannot find name 'ppm'. [plugin angular-compiler]
+
+    src/app/components/products/products.component.ts:991:20:
+      991 │         speed: ''70 ppm',
+          ╵                     ~~~
+
+
+✘ [ERROR] TS1005: ',' expected. [plugin angular-compiler]
+
+    src/app/components/products/products.component.ts:991:23:
+      991 │         speed: ''70 ppm',
+          ╵                        ~~
+
+
+✘ [ERROR] TS1002: Unterminated string literal. [plugin angular-compiler]
+
+    src/app/components/products/products.component.ts:991:25:
+      991 │         speed: ''70 ppm',
+          ╵                          ^
+
+
+✘ [ERROR] TS1005: ':' expected. [plugin angular-compiler]
+
+    src/app/components/products/products.component.ts:992:8:
+      992 │         resolution: '1200 x 3600 px',
+          ╵         ~~~~~~~~~~
+
+
+✘ [ERROR] TS2304: Cannot find name 'resolution'. [plugin angular-compiler]
+
+    src/app/components/products/products.component.ts:992:8:
+      992 │         resolution: '1200 x 3600 px',
+          ╵         ~~~~~~~~~~
+
+
+✘ [ERROR] TS1005: ',' expected. [plugin angular-compiler]
+
+    src/app/components/products/products.component.ts:992:18:
+      992 │         resolution: '1200 x 3600 px',
+          ╵                   ^
+
+
+✘ [ERROR] TS1005: ':' expected. [plugin angular-compiler]
+
+    src/app/components/products/products.component.ts:992:36:
+      992 │         resolution: '1200 x 3600 px',
+          ╵                                     ^
+
+
+✘ [ERROR] Expected ":" but found "1200"
+
+    src/app/components/products/products.component.ts:446:57:
+      446 │ ...          speed: '', 70: ppm, ',: resolution, '1200 x 3600 px': ,
+          │                                                   ~~~~
+          ╵                                                   :
+
