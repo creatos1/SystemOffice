@@ -1112,7 +1112,9 @@ export class ProductsComponent {
       }
     }));
     this.filteredProducts = [...this.products];
+    this.itemsPerPage = 9;
     this.totalPages = Math.ceil(this.filteredProducts.length / this.itemsPerPage);
+    this.currentPage = 1;
   }
   showModal = false;
   selectedPrinter: any = null;
