@@ -1086,7 +1086,7 @@ export class ProductsComponent {
   printers: Printer[] = [];
   filteredProducts: any[] = [];
   currentPage = 1;
-  itemsPerPage = 12;
+  itemsPerPage = 9;
   totalPages = 1;
   showDetailsModal = false;
   selectedProduct: any = null;

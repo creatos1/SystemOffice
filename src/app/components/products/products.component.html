@@ -9,7 +9,7 @@
       <div class="button-group">
         <button class="quote-btn">Cotizar</button>
         <button class="details-btn" (click)="showDescription(printer)">Mostrar descripción</button>
-</div>
+      </div>
     </div>
   </div>
 </div>
@@ -87,4 +87,31 @@
       </div>
     </div>
   </div>
+</div>
+
+<div class="pagination">
+  <button
+    class="pagination-btn prev"
+    [disabled]="currentPage === 1"
+    (click)="changePage(currentPage - 1)"
+  >
+    Anterior
+  </button>
+  <div class="pagination-numbers">
+    <button
+      class="pagination-num"
+      *ngFor="let page of paginationArray()"
+      [class.active]="page === currentPage"
+      (click)="changePage(page)"
+    >
+      {{ page }}
+    </button>
+  </div>
+  <button
+    class="pagination-btn next"
+    [disabled]="currentPage === totalPages"
+    (click)="changePage(currentPage + 1)"
+  >
+    Siguiente
+  </button>
 </div>
