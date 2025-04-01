@@ -851,7 +851,15 @@ export class ProductsComponent {
       isNew: false,
       rating: 4.5,
       reviewCount: 0,
-      characteristics: printer.characteristics
+      characteristics: {
+        paperSize: printer.characteristics.paperSize,
+        color: printer.characteristics.color,
+        speed: printer.characteristics.speed,
+        resolution: printer.characteristics.resolution,
+        monthlyDutyCycle: printer.characteristics.additionalFeatures?.monthlyDutyCycle || '150,000 pág. por mes',
+        tonerYieldBW: printer.characteristics.additionalFeatures?.tonerYieldBW,
+        tonerYieldColor: printer.characteristics.additionalFeatures?.tonerYieldColor
+      }
     }));
     this.filteredProducts = [...this.products];
     this.totalPages = Math.ceil(this.filteredProducts.length / this.itemsPerPage);
