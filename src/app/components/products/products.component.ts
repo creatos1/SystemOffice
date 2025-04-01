@@ -1117,14 +1117,10 @@ export class ProductsComponent {
     this.currentPage = 1;
   }
 
-  changePage(page: number) {
+  changePage(page: number): void {
     if (page >= 1 && page <= this.totalPages) {
       this.currentPage = page;
-      const startIndex = (page - 1) * this.itemsPerPage;
-      const endIndex = startIndex + this.itemsPerPage;
-      return this.filteredProducts.slice(startIndex, endIndex);
     }
-    return [];
   }
 
   getCurrentPageProducts(): any[] {
