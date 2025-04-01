@@ -813,6 +813,258 @@ export class ProductsComponent {
         monthlyDutyCycle: '250,000 pág. por mes'
       }
     },
+    {
+      id: 6,
+      name: 'bizhub C458',
+      category: 'Impresora Multifuncional',
+      brand: 'Konica Minolta',
+      condition: 'Nuevo',
+      image: 'assets/images/bizhub-c458.jpg',
+      isNew: true,
+      rating: 4.9,
+      reviewCount: 15,
+      characteristics: {
+        paperSize: 'A3 (11.7" × 16.5")',
+        color: 'Color',
+        speed: '45 ppm',
+        resolution: '1200 x 1200 px',
+        monthlyDutyCycle: '150,000 pág. por mes'
+      }
+    },
+    {
+      id: 7,
+      name: 'WorkForce Pro WF-C579R',
+      category: 'Impresora Multifuncional',
+      brand: 'Epson',
+      condition: 'Nuevo',
+      image: 'assets/images/wf-c579r.jpg',
+      isNew: true,
+      rating: 4.7,
+      reviewCount: 23,
+      characteristics: {
+        paperSize: 'A4 (8.3" × 11.7")',
+        color: 'Color',
+        speed: '34 ppm',
+        resolution: '4800 x 1200 px',
+        monthlyDutyCycle: '75,000 pág. por mes'
+      }
+    },
+    {
+      id: 8,
+      name: 'imageRUNNER 2630i',
+      category: 'Impresora Multifuncional',
+      brand: 'Canon',
+      condition: 'Seminuevo',
+      image: 'assets/images/ir-2630i.jpg',
+      isNew: false,
+      rating: 4.5,
+      reviewCount: 42,
+      characteristics: {
+        paperSize: 'A3 (11.7" × 16.5")',
+        color: 'Blanco y negro',
+        speed: '30 ppm',
+        resolution: '1200 x 1200 px',
+        monthlyDutyCycle: '100,000 pág. por mes'
+      }
+    },
+    {
+      id: 9,
+      name: 'VersaLink C7030',
+      category: 'Impresora Multifuncional',
+      brand: 'Xerox',
+      condition: 'Nuevo',
+      image: 'assets/images/versalink-c7030.jpg',
+      isNew: true,
+      rating: 4.8,
+      reviewCount: 19,
+      characteristics: {
+        paperSize: 'A3 (11.7" × 16.5")',
+        color: 'Color',
+        speed: '30 ppm',
+        resolution: '1200 x 2400 px',
+        monthlyDutyCycle: '129,000 pág. por mes'
+      }
+    },
+    {
+      id: 10,
+      name: 'IM C4500',
+      category: 'Impresora Multifuncional',
+      brand: 'Ricoh',
+      condition: 'Nuevo',
+      image: 'assets/images/im-c4500.jpg',
+      isNew: true,
+      rating: 4.9,
+      reviewCount: 27,
+      characteristics: {
+        paperSize: 'A3 (11.7" × 16.5")',
+        color: 'Color',
+        speed: '45 ppm',
+        resolution: '1200 x 1200 px',
+        monthlyDutyCycle: '200,000 pág. por mes'
+      }
+    },
+    {
+      id: 11,
+      name: 'TASKalfa 3253ci',
+      category: 'Impresora Multifuncional',
+      brand: 'Kyocera',
+      condition: 'Nuevo',
+      image: 'assets/images/taskalfa-3253ci.jpg',
+      isNew: true,
+      rating: 4.6,
+      reviewCount: 31,
+      characteristics: {
+        paperSize: 'A3 (11.7" × 16.5")',
+        color: 'Color',
+        speed: '32 ppm',
+        resolution: '1200 x 1200 px',
+        monthlyDutyCycle: '175,000 pág. por mes'
+      }
+    },
+    {
+      id: 12,
+      name: 'bizhub 458e',
+      category: 'Impresora Multifuncional',
+      brand: 'Konica Minolta',
+      condition: 'Seminuevo',
+      image: 'assets/images/bizhub-458e.jpg',
+      isNew: false,
+      rating: 4.4,
+      reviewCount: 36,
+      characteristics: {
+        paperSize: 'A3 (11.7" × 16.5")',
+        color: 'Blanco y negro',
+        speed: '45 ppm',
+        resolution: '1200 x 1200 px',
+        monthlyDutyCycle: '150,000 pág. por mes'
+      }
+    },
+    {
+      id: 13,
+      name: 'Color C60',
+      category: 'Impresora Producción',
+      brand: 'Xerox',
+      condition: 'Seminuevo',
+      image: 'assets/images/color-c60.jpg',
+      isNew: false,
+      rating: 4.7,
+      reviewCount: 22,
+      characteristics: {
+        paperSize: 'A3+ (13" × 19")',
+        color: 'Color',
+        speed: '60 ppm',
+        resolution: '2400 x 2400 px',
+        monthlyDutyCycle: '300,000 pág. por mes'
+      }
+    },
+    {
+      id: 14,
+      name: 'Pro C5200s',
+      category: 'Impresora Producción',
+      brand: 'Ricoh',
+      condition: 'Nuevo',
+      image: 'assets/images/pro-c5200s.jpg',
+      isNew: true,
+      rating: 4.8,
+      reviewCount: 17,
+      characteristics: {
+        paperSize: 'A3+ (13" × 19")',
+        color: 'Color',
+        speed: '65 ppm',
+        resolution: '2400 x 4800 px',
+        monthlyDutyCycle: '450,000 pág. por mes'
+      }
+    },
+    {
+      id: 15,
+      name: 'AccurioPress C3070',
+      category: 'Impresora Producción',
+      brand: 'Konica Minolta',
+      condition: 'Nuevo',
+      image: 'assets/images/accurio-c3070.jpg',
+      isNew: true,
+      rating: 4.9,
+      reviewCount: 12,
+      characteristics: {
+        paperSize: 'A3+ (13" × 19")',
+        color: 'Color',
+        speed: '70 ppm',
+        resolution: '1200 x 3600 px',
+        monthlyDutyCycle: '500,000 pág. por mes'
+      }
+    },
+    {
+      id: 16,
+      name: 'imageRUNNER ADVANCE DX 6000i',
+      category: 'Impresora Multifuncional',
+      brand: 'Canon',
+      condition: 'Nuevo',
+      image: 'assets/images/ir-6000i.jpg',
+      isNew: true,
+      rating: 4.7,
+      reviewCount: 8,
+      characteristics: {
+        paperSize: 'A3 (11.7" × 16.5")',
+        color: 'Blanco y negro',
+        speed: '60 ppm',
+        resolution: '1200 x 1200 px',
+        monthlyDutyCycle: '250,000 pág. por mes'
+      }
+    },
+    {
+      id: 17,
+      name: 'TASKalfa 7054ci',
+      category: 'Impresora Multifuncional',
+      brand: 'Kyocera',
+      condition: 'Nuevo',
+      image: 'assets/images/taskalfa-7054ci.jpg',
+      isNew: true,
+      rating: 4.8,
+      reviewCount: 14,
+      characteristics: {
+        paperSize: 'A3 (11.7" × 16.5")',
+        color: 'Color',
+        speed: '70 ppm',
+        resolution: '4800 x 1200 px',
+        monthlyDutyCycle: '300,000 pág. por mes'
+      }
+    },
+    {
+      id: 18,
+      name: 'IM 8000',
+      category: 'Impresora Multifuncional',
+      brand: 'Ricoh',
+      condition: 'Nuevo',
+      image: 'assets/images/im-8000.jpg',
+      isNew: true,
+      rating: 4.9,
+      reviewCount: 6,
+      characteristics: {
+        paperSize: 'A3 (11.7" × 16.5")',
+        color: 'Blanco y negro',
+        speed: '80 ppm',
+        resolution: '1200 x 1200 px',
+        monthlyDutyCycle: '400,000 pág. por mes'
+      }
+    },
+    {
+      id: 19,
+      name: 'VersaLink B7035',
+      category: 'Impresora Multifuncional',
+      brand: 'Xerox',
+      condition: 'Seminuevo',
+      image: 'assets/images/versalink-b7035.jpg',
+      isNew: false,
+      rating: 4.5,
+      reviewCount: 25,
+      characteristics: {
+        paperSize: 'A3 (11.7" × 16.5")',
+        color: 'Blanco y negro',
+        speed: '35 ppm',
+        resolution: '1200 x 1200 px',
+        monthlyDutyCycle: '153,000 pág. por mes'
+      }
+    },
     // Previous products...
   ];
 
