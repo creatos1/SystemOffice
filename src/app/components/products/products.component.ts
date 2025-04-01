@@ -988,7 +988,7 @@ export class ProductsComponent {
       characteristics: {
         paperSize: 'A3+ (13" × 19")',
         color: 'Color',
-        speed: '70 ppm',
+        speed: ''70 ppm',
         resolution: '1200 x 3600 px',
         monthlyDutyCycle: '500,000 pág. por mes'
       }
@@ -1129,11 +1129,6 @@ export class ProductsComponent {
     }
   }
 
-  changePage(page: number): void {
-    if (page >= 1 && page <= this.totalPages) {
-      this.currentPage = page;
-    }
-  }
 
   getCurrentPageProducts(): any[] {
     const startIndex = (this.currentPage - 1) * this.itemsPerPage;
@@ -1164,7 +1159,7 @@ export class ProductsComponent {
         );
       }
     }
-    
+
     this.updatePagination();
   }
 
