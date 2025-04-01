@@ -1178,8 +1178,8 @@ export class ProductsComponent {
     this.currentPage = 1;
   }
 
-  changePage(page: unknown) {
-    if (typeof page === 'number') {
+  changePage(page: number): void {
+    if (page >= 1 && page <= this.totalPages) {
       this.currentPage = page;
     }
   }
