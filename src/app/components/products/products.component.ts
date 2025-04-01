@@ -1113,8 +1113,20 @@ export class ProductsComponent {
     }));
     this.filteredProducts = [...this.products];
     this.itemsPerPage = 9;
+    this.updatePagination();
+  }
+
+  private updatePagination() {
     this.totalPages = Math.ceil(this.filteredProducts.length / this.itemsPerPage);
-    this.currentPage = 1;
+    if (this.currentPage > this.totalPages) {
+      this.currentPage = 1;
+    }
+  }
+
+  changePage(page: number): void {
+    if (page >= 1 && page <= this.totalPages) {
+      this.currentPage = page;
+    }
   }
 
   changePage(page: number): void {
@@ -1152,11 +1164,8 @@ export class ProductsComponent {
         );
       }
     }
-
-    this.totalPages = Math.ceil(
-      this.filteredProducts.length / this.itemsPerPage,
-    );
-    this.currentPage = 1;
+    
+    this.updatePagination();
   }
 
   search(event: Event) {
