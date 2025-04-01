@@ -1,5 +1,5 @@
 <div class="products-grid">
-  <div *ngFor="let printer of filteredProducts.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage)" class="product-card">
+  <div *ngFor="let printer of getCurrentPageProducts()" class="product-card">
     <div class="product-image">
       <img [src]="printer.image" [alt]="printer.name">
     </div>

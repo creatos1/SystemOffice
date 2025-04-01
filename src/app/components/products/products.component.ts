@@ -1116,6 +1116,22 @@ export class ProductsComponent {
     this.totalPages = Math.ceil(this.filteredProducts.length / this.itemsPerPage);
     this.currentPage = 1;
   }
+
+  changePage(page: number) {
+    if (page >= 1 && page <= this.totalPages) {
+      this.currentPage = page;
+      const startIndex = (page - 1) * this.itemsPerPage;
+      const endIndex = startIndex + this.itemsPerPage;
+      return this.filteredProducts.slice(startIndex, endIndex);
+    }
+    return [];
+  }
+
+  getCurrentPageProducts(): any[] {
+    const startIndex = (this.currentPage - 1) * this.itemsPerPage;
+    const endIndex = startIndex + this.itemsPerPage;
+    return this.filteredProducts.slice(startIndex, endIndex);
+  }
   showModal = false;
   selectedPrinter: any = null;
 
