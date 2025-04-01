@@ -1,0 +1,56 @@
+Application bundle generation failed. [20.388 seconds]
+✘ [ERROR] TS2322: Type '{ id: number; name: string; category: string; brand: string; price: number; oldPrice: number; image: string; isNew: false; discount: number; rating: number; reviewCount: number; description: string; }[]' is not assignable to type '({ id: number; name: string; category: string; brand: string; condition: string; image: string; isNew: boolean; rating: number; reviewCount: number; characteristics: { paperSize: string; color: string; ... 4 more ...; monthlyDutyCycle: string; }; } | { ...; } | { ...; })[]'.
+  Type '{ id: number; name: string; category: string; brand: string; price: number; oldPrice: number; image: string; isNew: false; discount: number; rating: number; reviewCount: number; description: string; }' is not assignable to type '{ id: number; name: string; category: string; brand: string; condition: string; image: string; isNew: boolean; rating: number; reviewCount: number; characteristics: { paperSize: string; color: string; ... 4 more ...; monthlyDutyCycle: string; }; } | { ...; } | { ...; }'.
+    Type '{ id: number; name: string; category: string; brand: string; price: number; oldPrice: number; image: string; isNew: false; discount: number; rating: number; reviewCount: number; description: string; }' is missing the following properties from type '{ id: number; name: string; category: string; brand: string; condition: string; image: string; isNew: boolean; rating: number; reviewCount: number; characteristics: { paperSize: string; color: string; ... 4 more ...; tonerYieldColor?: undefined; }; }': condition, characteristics [plugin angular-compiler]
+
+    src/app/components/products/products.component.ts:844:4:
+      844 │     this.products = this.printers.map(printer => ({
+          ╵     ~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS2339: Property 'price' does not exist on type '{ id: number; name: string; category: string; brand: string; condition: string; image: string; isNew: boolean; rating: number; reviewCount: number; characteristics: { paperSize: string; color: string; ... 4 more ...; monthlyDutyCycle: string; }; } | { ...; } | { ...; }'.
+  Property 'price' does not exist on type '{ id: number; name: string; category: string; brand: string; condition: string; image: string; isNew: boolean; rating: number; reviewCount: number; characteristics: { paperSize: string; color: string; ... 4 more ...; monthlyDutyCycle: string; }; }'. [plugin angular-compiler]
+
+    src/app/components/products/products.component.ts:882:33:
+      882 │             (product) => product.price <= 3000,
+          ╵                                  ~~~~~
+
+
+✘ [ERROR] TS2339: Property 'price' does not exist on type '{ id: number; name: string; category: string; brand: string; condition: string; image: string; isNew: boolean; rating: number; reviewCount: number; characteristics: { paperSize: string; color: string; ... 4 more ...; monthlyDutyCycle: string; }; } | { ...; } | { ...; }'.
+  Property 'price' does not exist on type '{ id: number; name: string; category: string; brand: string; condition: string; image: string; isNew: boolean; rating: number; reviewCount: number; characteristics: { paperSize: string; color: string; ... 4 more ...; monthlyDutyCycle: string; }; }'. [plugin angular-compiler]
+
+    src/app/components/products/products.component.ts:886:33:
+      886 │ ...        (product) => product.price > 3000 && product.price <= ...
+          ╵                                 ~~~~~
+
+
+✘ [ERROR] TS2339: Property 'price' does not exist on type '{ id: number; name: string; category: string; brand: string; condition: string; image: string; isNew: boolean; rating: number; reviewCount: number; characteristics: { paperSize: string; color: string; ... 4 more ...; monthlyDutyCycle: string; }; } | { ...; } | { ...; }'.
+  Property 'price' does not exist on type '{ id: number; name: string; category: string; brand: string; condition: string; image: string; isNew: boolean; rating: number; reviewCount: number; characteristics: { paperSize: string; color: string; ... 4 more ...; monthlyDutyCycle: string; }; }'. [plugin angular-compiler]
+
+    src/app/components/products/products.component.ts:886:57:
+      886 │ ...      (product) => product.price > 3000 && product.price <= 6000,
+          ╵                                                       ~~~~~
+
+
+✘ [ERROR] TS2339: Property 'price' does not exist on type '{ id: number; name: string; category: string; brand: string; condition: string; image: string; isNew: boolean; rating: number; reviewCount: number; characteristics: { paperSize: string; color: string; ... 4 more ...; monthlyDutyCycle: string; }; } | { ...; } | { ...; }'.
+  Property 'price' does not exist on type '{ id: number; name: string; category: string; brand: string; condition: string; image: string; isNew: boolean; rating: number; reviewCount: number; characteristics: { paperSize: string; color: string; ... 4 more ...; monthlyDutyCycle: string; }; }'. [plugin angular-compiler]
+
+    src/app/components/products/products.component.ts:890:33:
+      890 │ ...        (product) => product.price > 6000 && product.price <= ...
+          ╵                                 ~~~~~
+
+
+✘ [ERROR] TS2339: Property 'price' does not exist on type '{ id: number; name: string; category: string; brand: string; condition: string; image: string; isNew: boolean; rating: number; reviewCount: number; characteristics: { paperSize: string; color: string; ... 4 more ...; monthlyDutyCycle: string; }; } | { ...; } | { ...; }'.
+  Property 'price' does not exist on type '{ id: number; name: string; category: string; brand: string; condition: string; image: string; isNew: boolean; rating: number; reviewCount: number; characteristics: { paperSize: string; color: string; ... 4 more ...; monthlyDutyCycle: string; }; }'. [plugin angular-compiler]
+
+    src/app/components/products/products.component.ts:890:57:
+      890 │ ...     (product) => product.price > 6000 && product.price <= 10000,
+          ╵                                                      ~~~~~
+
+
+✘ [ERROR] TS2339: Property 'price' does not exist on type '{ id: number; name: string; category: string; brand: string; condition: string; image: string; isNew: boolean; rating: number; reviewCount: number; characteristics: { paperSize: string; color: string; ... 4 more ...; monthlyDutyCycle: string; }; } | { ...; } | { ...; }'.
+  Property 'price' does not exist on type '{ id: number; name: string; category: string; brand: string; condition: string; image: string; isNew: boolean; rating: number; reviewCount: number; characteristics: { paperSize: string; color: string; ... 4 more ...; monthlyDutyCycle: string; }; }'. [plugin angular-compiler]
+
+    src/app/components/products/products.component.ts:894:33:
+      894 │             (product) => product.price > 10000,
+          ╵                                  ~~~~~
