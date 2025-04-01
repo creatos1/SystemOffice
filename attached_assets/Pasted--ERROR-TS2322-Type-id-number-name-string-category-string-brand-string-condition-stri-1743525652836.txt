@@ -1,0 +1,13 @@
+✘ [ERROR] TS2322: Type '{ id: number; name: string; category: string; brand: string; condition: string; image: string; isNew: false; rating: number; reviewCount: number; characteristics: { paperSize: string; color: string; ... 4 more ...; tonerYieldColor: string | undefined; }; }[]' is not assignable to type '({ id: number; name: string; category: string; brand: string; condition: string; image: string; isNew: boolean; rating: number; reviewCount: number; characteristics: { paperSize: string; color: string; ... 4 more ...; monthlyDutyCycle: string; }; } | { ...; } | { ...; })[]'.
+  Type '{ id: number; name: string; category: string; brand: string; condition: string; image: string; isNew: false; rating: number; reviewCount: number; characteristics: { paperSize: string; color: string; ... 4 more ...; tonerYieldColor: string | undefined; }; }' is not assignable to type '{ id: number; name: string; category: string; brand: string; condition: string; image: string; isNew: boolean; rating: number; reviewCount: number; characteristics: { paperSize: string; color: string; ... 4 more ...; monthlyDutyCycle: string; }; } | { ...; } | { ...; }'.
+    Type '{ id: number; name: string; category: string; brand: string; condition: string; image: string; isNew: false; rating: number; reviewCount: number; characteristics: { paperSize: string; color: string; ... 4 more ...; tonerYieldColor: string | undefined; }; }' is not assignable to type '{ id: number; name: string; category: string; brand: string; condition: string; image: string; isNew: boolean; rating: number; reviewCount: number; characteristics: { paperSize: string; color: string; ... 4 more ...; tonerYieldColor?: undefined; }; }'.
+      The types of 'characteristics.tonerYieldBW' are incompatible between these types.
+        Type 'string | undefined' is not assignable to type 'undefined'.
+          Type 'string' is not assignable to type 'undefined'. [plugin angular-compiler]
+
+    src/app/components/products/products.component.ts:844:4:
+      844 │     this.products = this.printers.map(printer => ({
+          ╵     ~~~~~~~~~~~~~
+
+
+Watch mode enabled. Watching for file changes...
