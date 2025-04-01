@@ -1,0 +1,19 @@
+Application bundle generation failed. [18.424 seconds]
+✘ [ERROR] TS2322: Type '{ id: number; name: string; category: string; brand: string; condition: string; image: string; isNew: false; rating: number; reviewCount: number; characteristics: { paperSize: string; color: string; speed: string; resolution: string; additionalFeatures?: { ...; } | undefined; }; }[]' is not assignable to type '({ id: number; name: string; category: string; brand: string; condition: string; image: string; isNew: boolean; rating: number; reviewCount: number; characteristics: { paperSize: string; color: string; ... 4 more ...; monthlyDutyCycle: string; }; } | { ...; } | { ...; })[]'.
+  Type '{ id: number; name: string; category: string; brand: string; condition: string; image: string; isNew: false; rating: number; reviewCount: number; characteristics: { paperSize: string; color: string; speed: string; resolution: string; additionalFeatures?: { ...; } | undefined; }; }' is not assignable to type '{ id: number; name: string; category: string; brand: string; condition: string; image: string; isNew: boolean; rating: number; reviewCount: number; characteristics: { paperSize: string; color: string; ... 4 more ...; monthlyDutyCycle: string; }; } | { ...; } | { ...; }'.
+    Type '{ id: number; name: string; category: string; brand: string; condition: string; image: string; isNew: false; rating: number; reviewCount: number; characteristics: { paperSize: string; color: string; speed: string; resolution: string; additionalFeatures?: { ...; } | undefined; }; }' is not assignable to type '{ id: number; name: string; category: string; brand: string; condition: string; image: string; isNew: boolean; rating: number; reviewCount: number; characteristics: { paperSize: string; color: string; ... 4 more ...; tonerYieldColor?: undefined; }; }'.
+      Types of property 'characteristics' are incompatible.
+        Property 'monthlyDutyCycle' is missing in type '{ paperSize: string; color: string; speed: string; resolution: string; additionalFeatures?: { monthlyDutyCycle?: string | undefined; tonerYieldBW?: string | undefined; tonerYieldColor?: string | undefined; printSpeed?: string | undefined; screenSize?: string | undefined; warmupTime?: string | undefined; } | undefine...' but required in type '{ paperSize: string; color: string; speed: string; resolution: string; monthlyDutyCycle: string; tonerYieldBW?: undefined; tonerYieldColor?: undefined; }'. [plugin angular-compiler]
+
+    src/app/components/products/products.component.ts:844:4:
+      844 │     this.products = this.printers.map(printer => ({
+          ╵     ~~~~~~~~~~~~~
+
+  'monthlyDutyCycle' is declared here.
+
+    src/app/components/products/products.component.ts:795:8:
+      795 │         monthlyDutyCycle: '150,000 pág. por mes'
+          ╵         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Watch mode enabled. Watching for file changes...
