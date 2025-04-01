@@ -856,9 +856,7 @@ export class ProductsComponent {
         color: printer.characteristics.color,
         speed: printer.characteristics.speed,
         resolution: printer.characteristics.resolution,
-        monthlyDutyCycle: printer.characteristics.additionalFeatures?.monthlyDutyCycle || '150,000 pág. por mes',
-        tonerYieldBW: printer.characteristics.additionalFeatures?.tonerYieldBW,
-        tonerYieldColor: printer.characteristics.additionalFeatures?.tonerYieldColor
+        monthlyDutyCycle: printer.characteristics.additionalFeatures?.monthlyDutyCycle || '150,000 pág. por mes'
       }
     }));
     this.filteredProducts = [...this.products];
