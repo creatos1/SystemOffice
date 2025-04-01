@@ -988,7 +988,7 @@ export class ProductsComponent {
       characteristics: {
         paperSize: 'A3+ (13" × 19")',
         color: 'Color',
-        speed: ''70 ppm',
+        speed: '70 ppm',
         resolution: '1200 x 3600 px',
         monthlyDutyCycle: '500,000 pág. por mes'
       }
