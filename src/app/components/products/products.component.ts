@@ -845,15 +845,13 @@ export class ProductsComponent {
       id: parseInt(printer.id.replace(/\D/g, '')) || 1,
       name: printer.model,
       category: 'Impresora Multifuncional',
-      brand: printer.brand.toLowerCase(),
-      price: 9999,
-      oldPrice: 10999,
+      brand: printer.brand,
+      condition: printer.condition,
       image: printer.image,
       isNew: false,
-      discount: 10,
       rating: 4.5,
       reviewCount: 0,
-      description: `${printer.model} - ${printer.characteristics.paperSize} - ${printer.characteristics.speed}`
+      characteristics: printer.characteristics
     }));
     this.filteredProducts = [...this.products];
     this.totalPages = Math.ceil(this.filteredProducts.length / this.itemsPerPage);
@@ -876,24 +874,10 @@ export class ProductsComponent {
         this.filteredProducts = this.products.filter(
           (product) => product.brand === value,
         );
-      } else if (type === 'price') {
-        if (value === '0-3000') {
-          this.filteredProducts = this.products.filter(
-            (product) => product.price <= 3000,
-          );
-        } else if (value === '3000-6000') {
-          this.filteredProducts = this.products.filter(
-            (product) => product.price > 3000 && product.price <= 6000,
-          );
-        } else if (value === '6000-10000') {
-          this.filteredProducts = this.products.filter(
-            (product) => product.price > 6000 && product.price <= 10000,
-          );
-        } else if (value === '10000+') {
-          this.filteredProducts = this.products.filter(
-            (product) => product.price > 10000,
-          );
-        }
+      } else if (type === 'condition') {
+        this.filteredProducts = this.products.filter(
+          (product) => product.condition.toLowerCase() === value.toLowerCase()
+        );
       }
     }
 
