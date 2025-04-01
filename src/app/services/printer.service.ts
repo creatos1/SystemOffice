@@ -9,201 +9,201 @@ export class PrinterService {
   private printers: Printer[] = [
     {
       id: 'im-c3000',
-      model: 'IM C3000',
+      model: 'IM C3000 Ricoh',
       brand: 'Ricoh',
       condition: 'Seminuevo',
       functions: ['Impresión', 'Escáner', 'Fax', 'Copiado'],
       characteristics: {
-        paperSize: 'A3 (11.7" × 16.5")',
+        paperSize: 'Doble carta (11"x17")',
         color: 'Color',
         speed: '30 – 39 ppm',
         resolution: '1200 x 1200 px',
       },
-      image: 'assets/images/mp-c2003.jpg'
+      image: 'https://http2.mlstatic.com/D_NQ_NP_744043-MLM75863815304_042024-O.webp'
     },
     {
       id: 'mp-c6502',
-      model: 'MP C6502',
+      model: 'MP C2504 Ricoh',
       brand: 'Ricoh',
       condition: 'Nuevo',
       functions: ['Impresión', 'Escáner', 'Copiado'],
       characteristics: {
         paperSize: 'A3 (11.7" × 16.5")',
         color: 'Color',
-        speed: '65 ppm',
-        resolution: '1200 x 4800 px',
+        speed: '25 páginas por minuto',
+        resolution: '1200 x 1200 px',
         additionalFeatures: {
           monthlyDutyCycle: '300,000 páginas por mes'
         }
       },
-      image: 'assets/images/mp-c6502.jpg'
+      image: 'https://assets.rbl.ms/31808524/origin.png'
     },
     {
       id: 'ecosys-m3655idn',
-      model: 'ECOSYS M3655idn',
-      brand: 'Kyocera',
+      model: 'IM C4500 Ricoh',
+      brand: 'Ricoh',
       condition: 'Nuevo',
       functions: ['Impresión', 'Escáner', 'Copiado'],
       characteristics: {
-        paperSize: 'A4',
-        color: 'Blanco y negro',
-        speed: '55 ppm',
+        paperSize: 'A3',
+        color: 'Color',
+        speed: '45 ppm',
         resolution: '1200 x 1200 px',
         additionalFeatures: {
-          monthlyDutyCycle: '250,000 páginas por mes'
+          monthlyDutyCycle: '200,000 páginas por mes'
         }
       },
-      image: 'assets/images/ecosys-m3655idn.jpg'
+      image: 'https://copierpriceconfigurator.com/wp-content/uploads/2019/01/4500-config-1-600x600.png'
     },
     {
       id: 'bizhub-c658',
-      model: 'bizhub C658',
-      brand: 'Konica Minolta',
+      model: 'MP C3503 Ricoh',
+      brand: 'Ricoh',
       condition: 'Seminuevo',
-      functions: ['Impresión', 'Escáner', 'Copiado', 'Fax'],
+      functions: ['Impresión', 'Escáner', 'Copiado',],
       characteristics: {
         paperSize: 'A3 (11.7" × 16.5")',
         color: 'Color',
-        speed: '65 ppm',
+        speed: '30-39 ppm',
         resolution: '1200 x 1200 px',
         additionalFeatures: {
-          monthlyDutyCycle: '300,000 páginas por mes'
+          monthlyDutyCycle: '1,750,000 páginas por mes'
         }
       },
-      image: 'assets/images/bizhub-c658.jpg'
+      image: 'https://www.ricoh-americalatina.com/media-library/mp-c3503-color-laser-multifunction-printer.png?id=31808601&width=980'
     },
     {
       id: 'wf-c20600',
-      model: 'WorkForce Pro WF-C20600',
-      brand: 'Epson',
+      model: 'IM C2000 Ricoh',
+      brand: '',
       condition: 'Nuevo',
-      functions: ['Impresión', 'Escáner', 'Copiado'],
+      functions: ['Impresión', 'Escáner', 'Copiado' , 'Fax'],
       characteristics: {
-        paperSize: 'A3 (11.7" × 16.5")',
+        paperSize: 'Doble carta (11" × 17")',
         color: 'Color',
-        speed: '60 ppm',
-        resolution: '4800 x 1200 px',
+        speed: '20-29 ppm',
+        resolution: '1200 x 1200 px',
         additionalFeatures: {
-          monthlyDutyCycle: '100,000 páginas por mes'
+          monthlyDutyCycle: '1,000,000 páginas por mes'
         }
       },
-      image: 'assets/images/wf-c20600.jpg'
+      image: 'https://www.ricoh-americalatina.com/media-library/im-c2000-color-laser-multifunction-printer.png?id=31808530&width=980'
     },
     {
       id: 'imagerunner-2630i',
-      model: 'imageRUNNER 2630i',
+      model: 'MP C2003 Ricoh',
       brand: 'Canon',
       condition: 'Nuevo',
       functions: ['Impresión', 'Escáner', 'Copiado'],
       characteristics: {
         paperSize: 'A3 (11.7" × 16.5")',
-        color: 'Blanco y negro',
-        speed: '30 ppm',
+        color: 'Color',
+        speed: '20-29 ppm',
         resolution: '1200 x 1200 px',
         additionalFeatures: {
-          monthlyDutyCycle: '75,000 páginas por mes'
+          monthlyDutyCycle: '600,000 páginas por mes'
         }
       },
-      image: 'assets/images/imagerunner-2630i.jpg'
+      image: 'https://assets.rbl.ms/31808378/origin.png'
     },
     {
       id: 'altalink-b8170',
-      model: 'AltaLink B8170',
-      brand: 'Xerox',
+      model: 'MP C4504 Ricoh',
+      brand: 'Ricoh',
       condition: 'Nuevo',
-      functions: ['Impresión', 'Escáner', 'Copiado', 'Fax'],
+      functions: ['Impresión', 'Escáner', 'Copiado',],
       characteristics: {
         paperSize: 'A3 (11.7" × 16.5")',
-        color: 'Blanco y negro',
-        speed: '70 ppm',
-        resolution: '1200 x 2400 px',
+        color: 'Color',
+        speed: '40-49 ppm',
+        resolution: '1200 x 1200 px',
         additionalFeatures: {
-          monthlyDutyCycle: '300,000 páginas por mes'
+          monthlyDutyCycle: '80,000 páginas por mes'
         }
       },
-      image: 'assets/images/altalink-b8170.jpg'
+      image: 'https://assets.rbl.ms/31808393/origin.png'
     },
     {
       id: 'versalink-c7030',
-      model: 'VersaLink C7030',
-      brand: 'Xerox',
+      model: 'MP 6054 Ricoh',
+      brand: 'Ricoh',
       condition: 'Seminuevo',
       functions: ['Impresión', 'Escáner', 'Copiado'],
       characteristics: {
         paperSize: 'A3 (11.7" × 16.5")',
-        color: 'Color',
-        speed: '30 ppm',
-        resolution: '1200 x 2400 px',
+        color: 'Blanco y Negro',
+        speed: '60-69 ppm',
+        resolution: '1200 x 1200 px',
         additionalFeatures: {
-          monthlyDutyCycle: '129,000 páginas por mes'
+          monthlyDutyCycle: '300,000 páginas por mes'
         }
       },
       image: 'assets/images/versalink-c7030.jpg'
     },
     {
       id: 'pro-c5300s',
-      model: 'Pro C5300s',
+      model: 'ECOSYS M3040 Kyocera',
       brand: 'Ricoh',
       condition: 'Nuevo',
       functions: ['Impresión', 'Escáner', 'Copiado'],
       characteristics: {
-        paperSize: 'A3+ (13" × 19")',
-        color: 'Color',
-        speed: '65 ppm',
-        resolution: '2400 x 4800 px',
+        paperSize: 'A4 (8,3" x 11.7")',
+        color: 'Blanco y Negro',
+        speed: '40-49 ppm',
+        resolution: '600 x 600 px',
         additionalFeatures: {
-          monthlyDutyCycle: '450,000 páginas por mes'
+          monthlyDutyCycle: '150,000 páginas por mes'
         }
       },
-      image: 'assets/images/pro-c5300s.jpg'
+      image: ''
     },
     {
       id: 'taskalfa-7054ci',
-      model: 'TASKalfa 7054ci',
+      model: 'ECOSYS M3550 Kyocera',
       brand: 'Kyocera',
       condition: 'Nuevo',
-      functions: ['Impresión', 'Escáner', 'Copiado', 'Fax'],
+      functions: ['Impresión', 'Escáner', 'Copiado', ],
       characteristics: {
-        paperSize: 'A3 (11.7" × 16.5")',
-        color: 'Color',
-        speed: '70 ppm',
-        resolution: '4800 x 1200 px',
+        paperSize: 'A4 (8,3" x 11.7")',
+        color: 'Blanco y Negro',
+        speed: '50 - 59 ppm',
+        resolution: '600 x 1200 px',
         additionalFeatures: {
-          monthlyDutyCycle: '300,000 páginas por mes'
+          monthlyDutyCycle: '250,000 páginas por mes'
         }
       },
       image: 'assets/images/taskalfa-7054ci.jpg'
     },
     {
       id: 'bizhub-758',
-      model: 'bizhub 758',
-      brand: 'Konica Minolta',
+      model: 'M 2040 DN/L Kyocera',
+      brand: 'Kyocera',
       condition: 'Seminuevo',
-      functions: ['Impresión', 'Escáner', 'Copiado', 'Fax'],
+      functions: ['Impresión', 'Escáner', 'Copiado',],
       characteristics: {
-        paperSize: 'A3 (11.7" × 16.5")',
-        color: 'Blanco y negro',
-        speed: '75 ppm',
-        resolution: '1200 x 1200 px',
+        paperSize: 'A4 (8,3" x 11.7")',
+        color: 'Blanco y Negro',
+        speed: '40 - 49 ppm',
+        resolution: '600 x 600 px',
         additionalFeatures: {
-          monthlyDutyCycle: '250,000 páginas por mes'
+          monthlyDutyCycle: '50,000 páginas por mes'
         }
       },
       image: 'assets/images/bizhub-758.jpg'
     },
     {
       id: 'imagepress-c910',
-      model: 'imagePRESS C910',
-      brand: 'Canon',
+      model: 'M 3145idn Kyocera',
+      brand: 'Kyocera',
       condition: 'Nuevo',
       functions: ['Impresión'],
       characteristics: {
-        paperSize: 'A3+ (13" × 19")',
-        color: 'Color',
-        speed: '90 ppm',
-        resolution: '2400 x 2400 px',
+        paperSize: 'Carta',
+        color: 'Blanco y negro',
+        speed: '40 - 49 ppm',
+        resolution: '600 x 600 px',
         additionalFeatures: {
-          monthlyDutyCycle: '500,000 páginas por mes'
+          monthlyDutyCycle: '50,000 páginas por mes'
         }
       },
       image: 'assets/images/imagepress-c910.jpg'

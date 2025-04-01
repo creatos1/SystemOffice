@@ -63,7 +63,11 @@ import { Printer } from '../../models/printer.interface';
                   <button class="action-btn" title="Favorito">
                     <i class="far fa-heart"></i>
                   </button>
-                  <button (click)="showDescription(product)" class="action-btn" title="Mostrar Descripción">
+                  <button
+                    (click)="showDescription(product)"
+                    class="action-btn"
+                    title="Mostrar Descripción"
+                  >
                     <i class="fas fa-info-circle"></i>
                   </button>
                 </div>
@@ -80,8 +84,17 @@ import { Printer } from '../../models/printer.interface';
                   <span class="rating-count">({{ product.reviewCount }})</span>
                 </div>
                 <div class="product-buttons">
-                  <a href="tel:+524491298900" class="btn btn-primary product-btn">Cotizar</a>
-                  <button class="btn btn-secondary product-btn" (click)="showDetails(product)">Detalles</button>
+                  <a
+                    href="tel:+524491298900"
+                    class="btn btn-primary product-btn"
+                    >Cotizar</a
+                  >
+                  <button
+                    class="btn btn-secondary product-btn"
+                    (click)="showDetails(product)"
+                  >
+                    Detalles
+                  </button>
                 </div>
               </div>
             </div>
@@ -135,7 +148,32 @@ import { Printer } from '../../models/printer.interface';
       <div class="modal-content">
         <span class="close" (click)="closeModal()">&times;</span>
         <h2>{{ selectedPrinter?.name }}</h2>
-        <p>{{ selectedPrinter?.description }}</p> </div>
+        <div class="printer-details" *ngIf="selectedPrinter">
+          <h3>Características:</h3>
+          <ul class="characteristics-list">
+            <li>
+              <strong>Tamaño de papel:</strong>
+              {{ selectedPrinter.characteristics.paperSize }}
+            </li>
+            <li>
+              <strong>Color:</strong>
+              {{ selectedPrinter.characteristics.color }}
+            </li>
+            <li>
+              <strong>Velocidad:</strong>
+              {{ selectedPrinter.characteristics.speed }}
+            </li>
+            <li>
+              <strong>Resolución:</strong>
+              {{ selectedPrinter.characteristics.resolution }}
+            </li>
+            <li>
+              <strong>Ciclo mensual:</strong>
+              {{ selectedPrinter.characteristics.monthlyDutyCycle }}
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
     <div class="modal" [class.show]="showDetailsModal">
       <div class="modal-content">
@@ -674,6 +712,25 @@ import { Printer } from '../../models/printer.interface';
         text-decoration: none;
         cursor: pointer;
       }
+
+      .printer-details {
+        margin-top: 20px;
+      }
+
+      .characteristics-list {
+        list-style: none;
+        padding: 0;
+      }
+
+      .characteristics-list li {
+        padding: 8px 0;
+        border-bottom: 1px solid #eee;
+      }
+
+      .characteristics-list strong {
+        color: #333;
+        margin-right: 10px;
+      }
     `,
   ],
 })
@@ -685,46 +742,16 @@ export class ProductsComponent {
       icon: 'fas fa-print',
       productCount: 24,
     },
-    {
-      name: 'Multifuncionales',
-      slug: 'multifuncionales',
-      icon: 'fas fa-copy',
-      productCount: 18,
-    },
-    {
-      name: 'Escáners',
-      slug: 'escaners',
-      icon: 'fas fa-scanner',
-      productCount: 12,
-    },
-    {
-      name: 'Plotters',
-      slug: 'plotters',
-      icon: 'fas fa-drafting-compass',
-      productCount: 8,
-    },
-    {
-      name: 'Refacciones',
-      slug: 'refacciones',
-      icon: 'fas fa-cogs',
-      productCount: 65,
-    },
-    {
-      name: 'Tintas y Toners',
-      slug: 'tintas',
-      icon: 'fas fa-tint',
-      productCount: 47,
-    },
   ];
 
   products = [
     {
       id: 1,
       name: 'MP C2003',
-      category: 'Impresora Multifuncional',
+      category: 'Ricoh',
       brand: 'Ricoh',
       condition: 'Seminuevo',
-      image: 'assets/images/mp-c2003.jpg',
+      image: 'assets/products/1.webp',
       isNew: false,
       rating: 4.5,
       reviewCount: 45,
@@ -735,8 +762,8 @@ export class ProductsComponent {
         resolution: '1200 x 1200 px',
         tonerYieldBW: '15,000 impresiones',
         tonerYieldColor: '90,000 impresiones',
-        monthlyDutyCycle: '600,000 pág. por mes'
-      }
+        monthlyDutyCycle: '600,000 pág. por mes',
+      },
     },
     {
       id: 2,
@@ -744,7 +771,7 @@ export class ProductsComponent {
       category: 'Impresora Multifuncional',
       brand: 'Ricoh',
       condition: 'Seminuevo',
-      image: 'assets/images/mp-c4504.jpg',
+      image: '../../../assets/products/1.webp',
       isNew: false,
       rating: 4.7,
       reviewCount: 38,
@@ -755,8 +782,8 @@ export class ProductsComponent {
         resolution: '1200 x 1200 px',
         tonerYieldBW: '33,000 impresiones',
         tonerYieldColor: '22,500 impresiones',
-        monthlyDutyCycle: '80,000 pág. por mes'
-      }
+        monthlyDutyCycle: '80,000 pág. por mes',
+      },
     },
     {
       id: 3,
@@ -774,8 +801,8 @@ export class ProductsComponent {
         speed: '60 - 69 ppm',
         resolution: '1200 x 1200 px',
         tonerYieldBW: '37,000 impresiones',
-        monthlyDutyCycle: '300,000 impresiones'
-      }
+        monthlyDutyCycle: '300,000 impresiones',
+      },
     },
     {
       id: 4,
@@ -792,8 +819,8 @@ export class ProductsComponent {
         color: 'Blanco y negro',
         speed: '40 - 49 ppm',
         resolution: '600 x 600 px',
-        monthlyDutyCycle: '150,000 pág. por mes'
-      }
+        monthlyDutyCycle: '150,000 pág. por mes',
+      },
     },
     {
       id: 5,
@@ -810,8 +837,8 @@ export class ProductsComponent {
         color: 'Blanco y negro',
         speed: '50 - 59 ppm',
         resolution: '1200 x 1200 px',
-        monthlyDutyCycle: '250,000 pág. por mes'
-      }
+        monthlyDutyCycle: '250,000 pág. por mes',
+      },
     },
     {
       id: 6,
@@ -828,8 +855,8 @@ export class ProductsComponent {
         color: 'Color',
         speed: '45 ppm',
         resolution: '1200 x 1200 px',
-        monthlyDutyCycle: '150,000 pág. por mes'
-      }
+        monthlyDutyCycle: '150,000 pág. por mes',
+      },
     },
     {
       id: 7,
@@ -846,8 +873,8 @@ export class ProductsComponent {
         color: 'Color',
         speed: '34 ppm',
         resolution: '4800 x 1200 px',
-        monthlyDutyCycle: '75,000 pág. por mes'
-      }
+        monthlyDutyCycle: '75,000 pág. por mes',
+      },
     },
     {
       id: 8,
@@ -855,7 +882,7 @@ export class ProductsComponent {
       category: 'Impresora Multifuncional',
       brand: 'Canon',
       condition: 'Seminuevo',
-      image: 'assets/images/ir-2630i.jpg',
+      image: 'assets/images/logo.jpeg',
       isNew: false,
       rating: 4.5,
       reviewCount: 42,
@@ -864,8 +891,8 @@ export class ProductsComponent {
         color: 'Blanco y negro',
         speed: '30 ppm',
         resolution: '1200 x 1200 px',
-        monthlyDutyCycle: '100,000 pág. por mes'
-      }
+        monthlyDutyCycle: '100,000 pág. por mes',
+      },
     },
     {
       id: 9,
@@ -882,12 +909,12 @@ export class ProductsComponent {
         color: 'Color',
         speed: '30 ppm',
         resolution: '1200 x 2400 px',
-        monthlyDutyCycle: '129,000 pág. por mes'
-      }
+        monthlyDutyCycle: '129,000 pág. por mes',
+      },
     },
     {
       id: 10,
-      name: 'IM C4500',
+      name: 'IM C450',
       category: 'Impresora Multifuncional',
       brand: 'Ricoh',
       condition: 'Nuevo',
@@ -900,8 +927,8 @@ export class ProductsComponent {
         color: 'Color',
         speed: '45 ppm',
         resolution: '1200 x 1200 px',
-        monthlyDutyCycle: '200,000 pág. por mes'
-      }
+        monthlyDutyCycle: '200,000 pág. por mes',
+      },
     },
     {
       id: 11,
@@ -918,8 +945,8 @@ export class ProductsComponent {
         color: 'Color',
         speed: '32 ppm',
         resolution: '1200 x 1200 px',
-        monthlyDutyCycle: '175,000 pág. por mes'
-      }
+        monthlyDutyCycle: '175,000 pág. por mes',
+      },
     },
     {
       id: 12,
@@ -936,8 +963,8 @@ export class ProductsComponent {
         color: 'Blanco y negro',
         speed: '45 ppm',
         resolution: '1200 x 1200 px',
-        monthlyDutyCycle: '150,000 pág. por mes'
-      }
+        monthlyDutyCycle: '150,000 pág. por mes',
+      },
     },
     {
       id: 13,
@@ -954,8 +981,8 @@ export class ProductsComponent {
         color: 'Color',
         speed: '60 ppm',
         resolution: '2400 x 2400 px',
-        monthlyDutyCycle: '300,000 pág. por mes'
-      }
+        monthlyDutyCycle: '300,000 pág. por mes',
+      },
     },
     {
       id: 14,
@@ -972,8 +999,8 @@ export class ProductsComponent {
         color: 'Color',
         speed: '65 ppm',
         resolution: '2400 x 4800 px',
-        monthlyDutyCycle: '450,000 pág. por mes'
-      }
+        monthlyDutyCycle: '450,000 pág. por mes',
+      },
     },
     {
       id: 15,
@@ -990,8 +1017,8 @@ export class ProductsComponent {
         color: 'Color',
         speed: '70 ppm',
         resolution: '1200 x 3600 px',
-        monthlyDutyCycle: '500,000 pág. por mes'
-      }
+        monthlyDutyCycle: '500,000 pág. por mes',
+      },
     },
     {
       id: 16,
@@ -1008,8 +1035,8 @@ export class ProductsComponent {
         color: 'Blanco y negro',
         speed: '60 ppm',
         resolution: '1200 x 1200 px',
-        monthlyDutyCycle: '250,000 pág. por mes'
-      }
+        monthlyDutyCycle: '250,000 pág. por mes',
+      },
     },
     {
       id: 17,
@@ -1026,8 +1053,8 @@ export class ProductsComponent {
         color: 'Color',
         speed: '70 ppm',
         resolution: '4800 x 1200 px',
-        monthlyDutyCycle: '300,000 pág. por mes'
-      }
+        monthlyDutyCycle: '300,000 pág. por mes',
+      },
     },
     {
       id: 18,
@@ -1044,8 +1071,8 @@ export class ProductsComponent {
         color: 'Blanco y negro',
         speed: '80 ppm',
         resolution: '1200 x 1200 px',
-        monthlyDutyCycle: '400,000 pág. por mes'
-      }
+        monthlyDutyCycle: '400,000 pág. por mes',
+      },
     },
     {
       id: 19,
@@ -1062,8 +1089,8 @@ export class ProductsComponent {
         color: 'Blanco y negro',
         speed: '35 ppm',
         resolution: '1200 x 1200 px',
-        monthlyDutyCycle: '153,000 pág. por mes'
-      }
+        monthlyDutyCycle: '153,000 pág. por mes',
+      },
     },
     // Previous products...
   ];
@@ -1093,7 +1120,7 @@ export class ProductsComponent {
 
   constructor(private printerService: PrinterService) {
     this.printers = this.printerService.getPrinters();
-    this.products = this.printers.map(printer => ({
+    this.products = this.printers.map((printer) => ({
       id: parseInt(printer.id.replace(/\D/g, '')) || 1,
       name: printer.model,
       category: 'Impresora Multifuncional',
@@ -1108,8 +1135,10 @@ export class ProductsComponent {
         color: printer.characteristics.color,
         speed: printer.characteristics.speed,
         resolution: printer.characteristics.resolution,
-        monthlyDutyCycle: printer.characteristics.additionalFeatures?.monthlyDutyCycle || '150,000 pág. por mes'
-      }
+        monthlyDutyCycle:
+          printer.characteristics.additionalFeatures?.monthlyDutyCycle ||
+          '',
+      },
     }));
     this.filteredProducts = [...this.products];
     this.itemsPerPage = 9;
@@ -1117,7 +1146,9 @@ export class ProductsComponent {
   }
 
   private updatePagination() {
-    this.totalPages = Math.ceil(this.filteredProducts.length / this.itemsPerPage);
+    this.totalPages = Math.ceil(
+      this.filteredProducts.length / this.itemsPerPage,
+    );
     if (this.currentPage > this.totalPages) {
       this.currentPage = 1;
     }
@@ -1128,7 +1159,6 @@ export class ProductsComponent {
       this.currentPage = page;
     }
   }
-
 
   getCurrentPageProducts(): any[] {
     const startIndex = (this.currentPage - 1) * this.itemsPerPage;
@@ -1155,7 +1185,7 @@ export class ProductsComponent {
         );
       } else if (type === 'condition') {
         this.filteredProducts = this.products.filter(
-          (product) => product.condition.toLowerCase() === value.toLowerCase()
+          (product) => product.condition.toLowerCase() === value.toLowerCase(),
         );
       }
     }
@@ -1197,12 +1227,12 @@ export class ProductsComponent {
   }
 
   showDetails(product: any) {
-    this.selectedProduct = product;
-    this.showDetailsModal = true;
+    this.selectedPrinter = product;
+    this.showModal = true;
   }
 
   closeDetailsModal() {
-    this.showDetailsModal = false;
-    this.selectedProduct = null;
+    this.showModal = false;
+    this.selectedPrinter = null;
   }
 }
