@@ -1128,9 +1128,9 @@ export class ProductsComponent {
     const endIndex = startIndex + this.itemsPerPage;
     return this.filteredProducts.slice(startIndex, endIndex);
   }
+
   showModal = false;
   selectedPrinter: any = null;
-
 
   filterProducts(type: string, event: Event) {
     const value = (event.target as HTMLSelectElement).value;
