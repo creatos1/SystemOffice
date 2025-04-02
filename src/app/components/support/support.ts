@@ -100,7 +100,7 @@ import { RouterLink } from '@angular/router';
   <a href="tel:+524491298900" class="btn btn-outline">Contactar vía teléfono</a>
 </div>
   </div>
-
+</section>
 
 <section class="features">
   <div class="container">
@@ -113,6 +113,37 @@ import { RouterLink } from '@angular/router';
     </div>
     <div class="buttons-container">
   <a href="tel:+524491298900" class="btn btn-outline">Contactar vía teléfono</a>
+    </div>
+  </div>
+  
+</section>
+<section class="cta">
+      <div class="container">
+        <div class="cta-content">
+          <h2>¿Necesitas ayuda con tus equipos de impresión?</h2>
+          <p>
+            Contáctanos para recibir soporte profesional y resolver tus
+            problemas rápidamente
+          </p>
+          <div>
+  <a routerLink="/contacto" 
+    style="background-color: #368ad6; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; display: inline-block; transition: all 0.3s ease; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);"
+    onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='4px 4px 10px rgba(0, 0, 0, 0.3)';"
+    onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='2px 2px 5px rgba(0, 0, 0, 0.2)';">
+    Solicitar Servicio
+  </a>
+  
+  <a href="tel:+524491298900"
+    style="background-color: #368ad6; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; display: inline-block; transition: all 0.3s ease; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); margin-left: 10px;"
+    onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='4px 4px 10px rgba(0, 0, 0, 0.3)';"
+    onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='2px 2px 5px rgba(0, 0, 0, 0.2)';">
+    Llamar Ahora
+  </a>
+</div>
+
+        </div>
+      </div>
+    </section>
 
   `,
   styles: [`

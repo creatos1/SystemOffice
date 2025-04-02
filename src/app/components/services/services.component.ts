@@ -55,7 +55,7 @@ import { RouterLink } from '@angular/router';
           </div>
           <div class="overview-image">
             <img
-              src="assets/images/service-tech.jpg"
+              src="https://xpertic.com.mx/wp-content/uploads/2021/11/q.jpg"
               alt="Técnico de servicio"
             />
           </div>
@@ -177,7 +177,7 @@ import { RouterLink } from '@angular/router';
             <a routerLink="/contacto" class="btn btn-primary"
               >Solicitar Servicio</a
             >
-            <a href="tel:5512345678" class="btn btn-outline">Llamar Ahora</a>
+            <a href="tel:+524491298900" class="btn btn-outline">Llamar Ahora</a>
           </div>
         </div>
       </div>
@@ -635,7 +635,7 @@ export class ServicesComponent {
         'Servicio técnico especializado para todo tipo de impresoras y multifuncionales con diagnóstico gratuito.',
       icon: 'fas fa-tools',
       image:
-        'https://images.unsplash.com/photo-1586810724476-c294fb7ac01b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+        'https://documax.mx/images/Documax/reparacion_impresora_documax.jpg',
       features: [
         'Diagnóstico gratuito',
         'Garantía de 3 meses',
@@ -650,7 +650,7 @@ export class ServicesComponent {
         'Planes de mantenimiento regulares para evitar fallas y prolongar la vida útil de sus equipos.',
       icon: 'fas fa-shield-alt',
       image:
-        'https://images.unsplash.com/photo-1580901368919-7738efb0f87e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+        'https://www.santisoluciones.com/blog/wp-content/uploads/2022/08/Reparacion-de-impresoras-1021x768.jpg',
       features: [
         'Limpieza profunda',
         'Lubricación de partes',
@@ -665,7 +665,7 @@ export class ServicesComponent {
         'Tóners, cartuchos, tintas y refacciones originales y compatibles con garantía de calidad.',
       icon: 'fas fa-shopping-cart',
       image:
-        'https://images.unsplash.com/photo-1565625415377-8a88517a80f2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+        'https://i0.wp.com/micr-sai.com.mx/wp-content/uploads/2021/07/tonerempresas1.png?resize=1024%2C612&ssl=1',
       features: [
         'Entrega a domicilio',
         'Facturación inmediata',
@@ -679,7 +679,7 @@ export class ServicesComponent {
       description:
         'Soluciones integrales de impresión con equipos de última generación. Incluye mantenimiento, consumibles y soporte técnico especializado.',
       icon: 'fas fa-handshake',
-      image: 'assets/images/rental-service.jpg',
+      image: 'https://m.media-amazon.com/images/I/716S2f0MH+L._AC_UF1000,1000_QL80_.jpg',
       features: [
         'Contratos flexibles desde 12 meses',
         'Mantenimiento preventivo y correctivo incluido',
@@ -696,7 +696,7 @@ export class ServicesComponent {
         'Conversión de archivos físicos a digitales con sistemas de organización y búsqueda eficientes.',
       icon: 'fas fa-file-alt',
       image:
-        'https://images.unsplash.com/photo-1576455136694-b9dcdb48d6ee?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+        'https://blog.fundacionjuanxxiii.org/hubfs/la-digitalizacion-de-documentos-y-su-impacto-en-los-informes-esg.jpg',
       features: [
         'OCR incluido',
         'Indexado de documentos',

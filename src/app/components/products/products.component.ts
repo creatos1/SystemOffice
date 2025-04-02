@@ -54,15 +54,9 @@ import { Printer } from '../../models/printer.interface';
                   >
                 </div>
                 <div class="product-actions">
-                  <button class="action-btn" title="Vista rápida">
-                    <i class="fas fa-eye"></i>
-                  </button>
-                  <button class="action-btn" title="Comparar">
-                    <i class="fas fa-exchange-alt"></i>
-                  </button>
-                  <button class="action-btn" title="Favorito">
-                    <i class="far fa-heart"></i>
-                  </button>
+                
+                  
+
                   <button
                     (click)="showDescription(product)"
                     class="action-btn"
@@ -75,14 +69,7 @@ import { Printer } from '../../models/printer.interface';
               <div class="product-info">
                 <span class="product-category">{{ product.category }}</span>
                 <h3>{{ product.name }}</h3>
-                <div class="product-rating">
-                  <i
-                    class="fas fa-star"
-                    *ngFor="let star of [1, 2, 3, 4, 5]; let i = index"
-                    [class.far]="i >= product.rating"
-                  ></i>
-                  <span class="rating-count">({{ product.reviewCount }})</span>
-                </div>
+               
                 <div class="product-buttons">
                   <a
                     href="tel:+524491298900"
@@ -93,39 +80,14 @@ import { Printer } from '../../models/printer.interface';
                     class="btn btn-secondary product-btn"
                     (click)="showDetails(product)"
                   >
-                    Detalles
+                    Ver Detalles
                   </button>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="pagination">
-            <button
-              class="pagination-btn prev"
-              [disabled]="currentPage === 1"
-              (click)="changePage(currentPage - 1)"
-            >
-              <i class="fas fa-chevron-left"></i> Anterior
-            </button>
-            <div class="pagination-numbers">
-              <button
-                class="pagination-num"
-                *ngFor="let page of paginationArray()"
-                [class.active]="page === currentPage"
-                (click)="changePage(page)"
-              >
-                {{ page }}
-              </button>
-            </div>
-            <button
-              class="pagination-btn next"
-              [disabled]="currentPage === totalPages"
-              (click)="changePage(currentPage + 1)"
-            >
-              Siguiente <i class="fas fa-chevron-right"></i>
-            </button>
-          </div>
+          
         </div>
       </div>
     </section>
@@ -740,7 +702,7 @@ export class ProductsComponent {
       name: 'Impresoras',
       slug: 'impresoras',
       icon: 'fas fa-print',
-      productCount: 24,
+      productCount: 19,
     },
   ];
 

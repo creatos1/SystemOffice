@@ -27,6 +27,14 @@ import { ScrollService } from '../../services/scroll.service';
               Plazuela Q #102<br />Ojocaliente 1<br />Aguascalientes, Ags. CP
               20196
             </p>
+            <a href="https://www.google.com/maps/place/System+Office+copiadoras+en+aguascalientes/@21.8795619,-102.2562766,20.21z/data=!4m9!1m2!2m1!1sPlazuela+Q+%23102Ojocaliente+1+Aguascalientes,+Ags.+CP+20196!3m5!1s0x8429edfc0d161343:0xc05f39c1e76ce7d!8m2!3d21.8795679!4d-102.2561073!16s%2Fg%2F11sc2w98ft?entry=ttu&g_ep=EgoyMDI1MDMzMC4wIKXMDSoASAFQAw%3D%3D" 
+  target="_blank" 
+  style="background-color: #368ad6; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; display: inline-block; transition: all 0.3s ease; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);"
+  onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='4px 4px 10px rgba(0, 0, 0, 0.3)';"
+  onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='2px 2px 5px rgba(0, 0, 0, 0.2)';">
+  Ver en Google Maps
+</a>
+
           </div>
 
           <div class="info-card">
@@ -34,7 +42,11 @@ import { ScrollService } from '../../services/scroll.service';
               <i class="fas fa-phone-alt"></i>
             </div>
             <h3>Llámanos</h3>
-            <p>Ventas: +52 449 129 8900<br />Lun - Vie: 9:00 - 18:00</p>
+            <p>Teléfono: +52 449 129 8900</p>
+            <div class="cta-buttons">
+        
+            <a href="tel:+524491298900" class="btn btn-outline">Llamar Ahora</a>
+          </div>
           </div>
 
           <div class="info-card">
@@ -42,19 +54,8 @@ import { ScrollService } from '../../services/scroll.service';
               <i class="fas fa-envelope"></i>
             </div>
             <h3>Escríbenos</h3>
+            <a>Envianos un mensaje</a>
             <p>ventas&#64;systemoffice.com.mx</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="contact-form-section">
-      <div class="container">
-        <div class="contact-wrapper">
-          <div class="contact-form text-center">
-            <h2>Envíanos un mensaje</h2>
-            <p>Contáctanos directamente haciendo clic en el botón de abajo.</p>
-
             <a href="mailto:ventas@systemoffice.com.mx" class="btn btn-primary">
               Enviar Correo
             </a>
@@ -62,6 +63,8 @@ import { ScrollService } from '../../services/scroll.service';
         </div>
       </div>
     </section>
+
+  
 
     <section class="faq">
       <div class="container">

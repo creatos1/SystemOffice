@@ -59,8 +59,13 @@ import { RouterLink } from '@angular/router';
 
         <div class="footer-bottom">
           <p>&copy; 2025 System Office. Todos los derechos reservados.</p>
+          <div>
+            Página desarrollada por Ian Axel Rodríguez Santoyo +524495526644
+          </div>
         </div>
+        
       </div>
+
     </footer>
   `,
   styles: [

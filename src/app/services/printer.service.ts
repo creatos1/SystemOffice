@@ -19,7 +19,7 @@ export class PrinterService {
         speed: '30 – 39 ppm',
         resolution: '1200 x 1200 px',
       },
-      image: 'https://http2.mlstatic.com/D_NQ_NP_744043-MLM75863815304_042024-O.webp'
+      image: 'https://assets.rbl.ms/31808352/origin.png'
     },
     {
       id: 'mp-c6502',
@@ -138,7 +138,7 @@ export class PrinterService {
           monthlyDutyCycle: '300,000 páginas por mes'
         }
       },
-      image: 'assets/images/versalink-c7030.jpg'
+      image: 'https://assets.rbl.ms/31808368/origin.png'
     },
     {
       id: 'pro-c5300s',
@@ -155,7 +155,7 @@ export class PrinterService {
           monthlyDutyCycle: '150,000 páginas por mes'
         }
       },
-      image: ''
+      image: 'https://m.media-amazon.com/images/I/81atJV-rpFL.jpg'
     },
     {
       id: 'taskalfa-7054ci',
@@ -172,7 +172,7 @@ export class PrinterService {
           monthlyDutyCycle: '250,000 páginas por mes'
         }
       },
-      image: 'assets/images/taskalfa-7054ci.jpg'
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR14PjYXfoF_O9QCwq2ujVg6HxgiWUpolbIwg&s'
     },
     {
       id: 'bizhub-758',
@@ -189,7 +189,7 @@ export class PrinterService {
           monthlyDutyCycle: '50,000 páginas por mes'
         }
       },
-      image: 'assets/images/bizhub-758.jpg'
+      image: 'https://sistema.vendecorp.com/images/Productos/7618.jpg'
     },
     {
       id: 'imagepress-c910',
@@ -198,7 +198,7 @@ export class PrinterService {
       condition: 'Nuevo',
       functions: ['Impresión'],
       characteristics: {
-        paperSize: 'Carta',
+        paperSize: 'Carta (8.5" x 11"',
         color: 'Blanco y negro',
         speed: '40 - 49 ppm',
         resolution: '600 x 600 px',
@@ -206,113 +206,121 @@ export class PrinterService {
           monthlyDutyCycle: '50,000 páginas por mes'
         }
       },
-      image: 'assets/images/imagepress-c910.jpg'
+      image: 'https://m.media-amazon.com/images/I/71rWIYMWYeL._AC_UF1000,1000_QL80_.jpg'
     },
     {
       id: 'im-8000',
-      model: 'IM 8000',
+      model: 'M 3655idn Kyocera',
       brand: 'Ricoh',
       condition: 'Nuevo',
       functions: ['Impresión', 'Escáner', 'Copiado'],
       characteristics: {
-        paperSize: 'A3 (11.7" × 16.5")',
-        color: 'Blanco y negro',
-        speed: '80 ppm',
+        paperSize: 'A4 (8,3" x 11.7")',
+        color: 'Blanco y Negro',
+        speed: '50 - 59 ppm',
         resolution: '1200 x 1200 px',
         additionalFeatures: {
-          monthlyDutyCycle: '400,000 páginas por mes'
+          monthlyDutyCycle: '250,000 páginas por mes'
         }
       },
-      image: 'assets/images/im-8000.jpg'
+      image: 'https://m.media-amazon.com/images/I/511jAHMG2-L.jpg'
     },
     {
       id: 'accuriopress-c4080',
-      model: 'AccurioPress C4080',
+      model: 'MA 4500IFX Kyocera',
       brand: 'Konica Minolta',
       condition: 'Nuevo',
       functions: ['Impresión'],
       characteristics: {
-        paperSize: 'A3+ (13" × 19")',
-        color: 'Color',
-        speed: '80 ppm',
-        resolution: '3600 x 2400 px',
+        paperSize: 'A4 (8,3" x 11.7")',
+        color: 'Blanco y Negro',
+        speed: '40 - 49 ppm',
+        resolution: '600 x 600 px',
         additionalFeatures: {
-          monthlyDutyCycle: '350,000 páginas por mes'
+          monthlyDutyCycle: '150,000 páginas por mes'
         }
       },
-      image: 'assets/images/accuriopress-c4080.jpg'
+      image: 'https://http2.mlstatic.com/D_NQ_NP_602715-MCO73985689635_012024-O.webp'
     },
     {
       id: 'mp-c2504',
-      model: 'MP C2504',
+      model: 'Ma 5500IFX Kyocera',
       brand: 'Ricoh',
       condition: 'Seminuevo',
       functions: ['Copiado', 'Impresión', 'Escáner'],
       characteristics: {
-        paperSize: 'A3 (11.7" × 16.5")',
-        color: 'Color',
-        speed: '20 - 29 ppm',
-        resolution: '1200 x 1200 px',
+        paperSize: 'A4 (8,3" x 11.7")',
+        color: 'Blanco y Negro',
+        speed: '50 - 59 ppm',
+        resolution: '600 x 600 px',
         additionalFeatures: {
-          warmupTime: '25 segundos',
-          printSpeed: '7.5 segundos color / 5.3 segundos b/n'
+          monthlyDutyCycle: '250,000 páginas por mes'
         }
       },
-      image: 'https://raw.githubusercontent.com/tu-repo/images/main/mp-c2504.jpg'
+      image: 'https://cbpnow.com/wp-content/uploads/ECOSYS-MA5500ifx-e1685462780706.png'
     },
     {
       id: 'im-c4500',
-      model: 'IM C4500',
+      model: 'BIZHUB 308 Konica Minolta',
       brand: 'Ricoh',
       condition: 'Seminuevo',
       functions: ['Copiado', 'Impresión', 'Escáner'],
       characteristics: {
         paperSize: 'A3 (11.7" × 16.5")',
-        color: 'Color',
-        speed: '40 - 49 ppm',
-        resolution: '1200 x 1200 px',
-        additionalFeatures: {
-          screenSize: 'Panel táctil en color de 10"',
-          tonerYieldBW: '33,000 Impresiones',
-          tonerYieldColor: '22,500 impresiones',
-          monthlyDutyCycle: '200,000 impresiones'
-        }
+        color: 'Blanco y negro',
+        speed: '30 - 39 ppm',
+        resolution: 'A3',
+      
       },
-      image: 'https://raw.githubusercontent.com/tu-repo/images/main/im-c4500.jpg'
+      image: 'https://d1nz2cwxocqem8.cloudfront.net/rendition/380230487157/image_equs0051q53ql1f5e7rbkrpa54/-C620x709,0,0-S900x1029-FWEBP'
     },
     {
       id: 'mp-c3503',
-      model: 'MP C3503',
+      model: 'BIZHUB 368 Ricoh',
       brand: 'Ricoh',
       condition: 'Seminuevo',
       functions: ['Copiado', 'Impresión', 'Escáner'],
       characteristics: {
         paperSize: 'A3 (11.7" × 16.5")',
-        color: 'Color',
+        color: 'Blanco y negro',
         speed: '30 - 39 ppm',
-        resolution: '1200 x 1200 px',
+        resolution: 'A3',
         additionalFeatures: {
-          tonerYieldBW: '29,500 impresiones',
-          tonerYieldColor: '18,000 impresiones',
-          monthlyDutyCycle: '1,750,000 páginas por mes'
+          tonerYieldBW: 'Láser',
+          
         }
       },
-      image: 'https://raw.githubusercontent.com/tu-repo/images/main/mp-c3503.jpg'
+      image: 'https://konicaminolta.b-cdn.net/wp-content/uploads/2022/03/Konica_Minolta_bizhub_c308_color_multifunction_printer.png'
     },
     {
       id: 'im-c2000',
-      model: 'IM C2000',
-      brand: 'Ricoh',
+      model: 'BIZHUB 558 Konica',
+      brand: 'Konica',
       condition: 'Seminuevo',
-      functions: ['Impresión', 'Escáner', 'Fax', 'Copiado'],
+      functions: ['Impresión', 'Escáner', 'Copiado'],
       characteristics: {
         paperSize: 'A3 (11.7" × 16.5")',
-        color: 'Color',
-        speed: '20 - 29 ppm',
-        resolution: '1200 x 1200 px'
+        color: 'Blanco y negro',
+        speed: '50 - 59 ppm',
+        resolution: 'A3, Impresora Monocromática de volumen Medio'
       },
-      image: 'https://raw.githubusercontent.com/tu-repo/images/main/im-c2000.jpg'
+      image: 'https://netcopiadoras.com/cdn/shop/files/BIZHUB458_800x800px_700x700.png?v=1735675322'
     },
+    {
+      id: 'im-c2000',
+      model: 'BIZHUB 658 Konica',
+      brand: 'Konica',
+      condition: 'Seminuevo',
+      functions: ['Impresión', 'Escáner', 'Copiado'],
+      characteristics: {
+        paperSize: 'A3 (11.7" × 16.5")',
+        color: 'Blanco y negro',
+        speed: '60 - 69 ppm',
+        resolution: 'A3'
+      },
+      image: 'https://netcopiadoras.com/cdn/shop/files/BIZHUB458_800x800px_700x700.png?v=1735675322'
+    },
+
     // Add all other printers here...
   ];
 
