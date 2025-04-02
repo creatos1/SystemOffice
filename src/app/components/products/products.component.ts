@@ -105,6 +105,7 @@ import { Printer } from '../../models/printer.interface';
         </div>
       </div>
     </section>
+    <br>    <br>
 
     <div class="modal" [class.show]="showModal">
       <div class="modal-content">
@@ -1068,7 +1069,7 @@ export class ProductsComponent {
     },
     {
       name: 'Konica',
-      logo: 'https://upload.wikimedia.org/wikipedia/commons/9/9d/Konica_Logo.svg',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Logo_Konica_Minolta.svg/1200px-Logo_Konica_Minolta.svg.png',
     },
   ];
 
